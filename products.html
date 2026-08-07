@@ -40,7 +40,6 @@ ROOH CARE | المنتجات
 💬 واتساب
 </a>
 
-
 </nav>
 
 
@@ -79,12 +78,7 @@ ROOH CARE
 
 
 
-
-
-
-
-
-<<section class="products" id="products-container">
+<section class="products" id="products-container">
 
 </section>
 
@@ -120,23 +114,37 @@ Premium Korean Beauty Store
 </footer>
 
 
+
+
+
+
 <script src="products.js"></script>
 
 
 <script>
 
+
 const container = document.getElementById("products-container");
+
+
+
+if(typeof products !== "undefined"){
+
 
 
 products.forEach(product => {
 
 
+
 container.innerHTML += `
+
 
 <div class="card">
 
 
+
 <img src="${product.image}" alt="${product.nameAr}">
+
 
 
 <h2>
@@ -150,11 +158,13 @@ ${product.nameEn}
 </h2>
 
 
+
 <p>
 
 ${product.description}
 
 </p>
+
 
 
 
@@ -166,6 +176,8 @@ ${product.price} دينار
 
 
 
+
+
 <a class="details"
 
 href="product-details.html?product=${product.nameEn}">
@@ -173,6 +185,7 @@ href="product-details.html?product=${product.nameEn}">
 ✨ عرض التفاصيل
 
 </a>
+
 
 
 
@@ -190,12 +203,32 @@ target="_blank">
 
 </div>
 
+
+
 `;
+
+
 
 });
 
 
+
+}
+
+else{
+
+
+container.innerHTML =
+
+"<h3>لم يتم تحميل المنتجات</h3>";
+
+}
+
+
+
 </script>
+
+
 
 </body>
 
