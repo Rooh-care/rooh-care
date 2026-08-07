@@ -6,7 +6,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ROOH CARE | متجر العناية</title>
+<title>ROOH CARE | Korean Beauty Store</title>
+
 
 <style>
 
@@ -14,21 +15,22 @@
 box-sizing:border-box;
 }
 
+
 body{
 
 margin:0;
 font-family:Arial, sans-serif;
-background:#faf7f2;
+background:#fbf7f2;
 color:#333;
 
 }
 
 
-/* الهيدر */
+/* Header */
 
 header{
 
-background:#ffffff;
+background:white;
 text-align:center;
 padding:25px 15px;
 
@@ -37,8 +39,8 @@ padding:25px 15px;
 
 .logo img{
 
-width:180px;
-max-width:80%;
+width:190px;
+max-width:85%;
 
 }
 
@@ -47,7 +49,7 @@ max-width:80%;
 
 width:100%;
 max-width:1000px;
-height:280px;
+height:300px;
 object-fit:cover;
 border-radius:25px;
 margin-top:20px;
@@ -58,24 +60,47 @@ margin-top:20px;
 .subtitle{
 
 font-size:18px;
-line-height:1.9;
+line-height:2;
 margin-top:20px;
 
 }
 
 
 
-/* الأقسام */
+/* Buttons */
 
-.section-title{
+.order{
+
+display:inline-block;
+background:#25D366;
+color:white;
+padding:14px 30px;
+border-radius:35px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+
+}
+
+
+.order:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+/* Sections */
+
+.title{
 
 text-align:center;
 color:#98754b;
 font-size:28px;
-margin:35px 0 15px;
+margin:35px 0 20px;
 
 }
-
 
 
 .info{
@@ -99,13 +124,39 @@ font-size:17px;
 
 
 
-/* المنتجات */
+/* Trust bar */
+
+.trust{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+padding:20px;
+
+}
+
+
+.trust div{
+
+background:white;
+padding:18px;
+border-radius:20px;
+width:220px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+/* Products */
 
 .products{
 
 display:flex;
-justify-content:center;
 flex-wrap:wrap;
+justify-content:center;
 gap:25px;
 padding:20px;
 
@@ -115,14 +166,21 @@ padding:20px;
 .card{
 
 background:white;
-width:300px;
+width:310px;
 padding:20px;
 border-radius:25px;
 text-align:center;
 box-shadow:0 5px 20px rgba(0,0,0,.1);
+transition:.3s;
 
 }
 
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
 
 
 .card img{
@@ -135,7 +193,6 @@ border-radius:20px;
 }
 
 
-
 .card h2{
 
 font-size:20px;
@@ -145,7 +202,6 @@ line-height:1.6;
 }
 
 
-
 .card p{
 
 line-height:1.7;
@@ -153,9 +209,25 @@ line-height:1.7;
 }
 
 
+.rating{
+
+color:#d39b35;
+font-size:20px;
+
+}
+
+
+.available{
+
+color:green;
+font-weight:bold;
+
+}
+
+
 .price{
 
-font-size:22px;
+font-size:23px;
 font-weight:bold;
 color:#b07b3c;
 margin:15px;
@@ -164,60 +236,37 @@ margin:15px;
 
 
 
-.order{
-
-display:inline-block;
-background:#25D366;
-color:white;
-padding:14px 30px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-
-}
-
-
-/* زر الواتساب العائم */
+/* WhatsApp Floating */
 
 .whatsapp-float{
 
 position:fixed;
 bottom:25px;
 right:25px;
-background:#25D366;
 width:62px;
 height:62px;
+background:#25D366;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-box-shadow:0 5px 15px rgba(0,0,0,.25);
+font-size:30px;
+color:white;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
 z-index:999;
+
 animation:pulse 2s infinite;
-
-}
-
-
-.whatsapp-float img{
-
-width:38px;
-height:38px;
 
 }
 
 
 @keyframes pulse{
 
-0%{
-transform:scale(1);
-}
-
 50%{
-transform:scale(1.08);
-}
 
-100%{
-transform:scale(1);
+transform:scale(1.1);
+
 }
 
 }
@@ -226,7 +275,7 @@ transform:scale(1);
 footer{
 
 text-align:center;
-padding:25px;
+padding:30px;
 color:#777;
 
 }
@@ -255,7 +304,7 @@ color:#777;
 
 <div class="subtitle">
 
-منتجات العناية بالبشرة والشعر ✨
+عناية كورية أصلية لبشرة أكثر إشراقاً ✨
 
 <br>
 
@@ -265,18 +314,87 @@ Authentic Korean Beauty Care
 
 توصيل لجميع محافظات العراق
 
-<br>
-
-Delivery All Over Iraq
-
 </div>
 
 
 </header>
 
+<section class="trust">
+
+
+<div>
+
+🚚
+
+<br>
+
+توصيل لجميع المحافظات
+
+<br>
+
+Iraq Delivery
+
+</div>
+
+
+
+<div>
+
+✨
+
+<br>
+
+منتجات عناية مختارة
+
+<br>
+
+Quality Care
+
+</div>
+
+
+
+<div>
+
+💬
+
+<br>
+
+طلب سريع عبر واتساب
+
+<br>
+
+Fast Order
+
+</div>
+
+
+
+<div>
+
+🔒
+
+<br>
+
+خدمة موثوقة
+
+<br>
+
+Trusted Service
+
+</div>
+
+
+</section>
+
+
+
+
+
 <section class="info">
 
-<h2 class="section-title">
+
+<h2 class="title">
 
 🎁 عروض ROOH CARE
 
@@ -289,22 +407,25 @@ Delivery All Over Iraq
 
 <br>
 
-Special offers on Korean beauty products
+خصومات وعروض خاصة قريباً
 
 <br>
 
-جودة عالية واختيار بعناية ✨
+Special beauty offers coming soon ✨
 
 </p>
+
 
 </section>
 
 
 
 
+
 <section class="info">
 
-<h2 class="section-title">
+
+<h2 class="title">
 
 لماذا ROOH CARE؟
 
@@ -321,13 +442,14 @@ Special offers on Korean beauty products
 
 <br>
 
-✨ أسعار مناسبة وخدمة مميزة
+✨ أسعار مناسبة وجودة عالية
 
 <br>
 
-✨ توصيل لجميع محافظات العراق
+✨ خدمة طلب سهلة وسريعة عبر الواتساب
 
 </p>
+
 
 </section>
 
@@ -335,7 +457,7 @@ Special offers on Korean beauty products
 
 
 
-<h2 class="section-title">
+<h2 class="title">
 
 منتجاتنا
 
@@ -345,9 +467,7 @@ Special offers on Korean beauty products
 
 
 <section class="products">
-
-
-
+  
 <div class="card">
 
 
@@ -365,6 +485,20 @@ DABO Charcoal Foam Cleanser
 </h2>
 
 
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+<p class="available">
+
+متوفر الآن ✅
+
+</p>
+
+
 <p>
 
 تنظيف عميق للبشرة وتقليل الدهون والشوائب
@@ -379,7 +513,9 @@ DABO Charcoal Foam Cleanser
 </div>
 
 
-<a class="order" href="https://wa.me/9647706136665" target="_blank">
+<a class="order" 
+href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب DABO Charcoal Foam Cleanser%0Aالسعر: 12000 دينار"
+target="_blank">
 
 🟢 اطلب الآن
 
@@ -387,6 +523,8 @@ DABO Charcoal Foam Cleanser
 
 
 </div>
+
+
 
 
 
@@ -409,6 +547,20 @@ DABO Black Snail Foam Cleanser
 </h2>
 
 
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+<p class="available">
+
+متوفر الآن ✅
+
+</p>
+
+
 <p>
 
 تنظيف لطيف وعناية يومية للبشرة
@@ -423,7 +575,9 @@ DABO Black Snail Foam Cleanser
 </div>
 
 
-<a class="order" href="https://wa.me/9647706136665" target="_blank">
+<a class="order" 
+href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب DABO Black Snail Foam Cleanser%0Aالسعر: 12000 دينار"
+target="_blank">
 
 🟢 اطلب الآن
 
@@ -431,6 +585,8 @@ DABO Black Snail Foam Cleanser
 
 
 </div>
+
+
 
 
 
@@ -454,6 +610,20 @@ DABO Hyaluronic Acid Foam Cleanser
 </h2>
 
 
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+<p class="available">
+
+متوفر الآن ✅
+
+</p>
+
+
 <p>
 
 تنظيف عميق مع دعم ترطيب البشرة
@@ -468,7 +638,9 @@ DABO Hyaluronic Acid Foam Cleanser
 </div>
 
 
-<a class="order" href="https://wa.me/9647706136665" target="_blank">
+<a class="order" 
+href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب DABO Hyaluronic Acid Foam Cleanser%0Aالسعر: 12000 دينار"
+target="_blank">
 
 🟢 اطلب الآن
 
@@ -483,25 +655,33 @@ DABO Hyaluronic Acid Foam Cleanser
 
 <section class="info">
 
-<h2 class="section-title">
 
-🚚 التوصيل
+<h2 class="title">
+
+🌿 روتين العناية
 
 </h2>
 
 
 <p>
 
-نوفر خدمة التوصيل لجميع محافظات العراق
+🌅 روتين الصباح:
 
 <br>
 
-Delivery available all over Iraq
+غسول + تونر + سيروم + واقي شمس
 
 <br><br>
 
-📱 WhatsApp:
-07706136665
+🌙 روتين المساء:
+
+<br>
+
+تنظيف البشرة + ترطيب + عناية مكثفة
+
+<br><br>
+
+ROOH CARE helps you build your beauty routine ✨
 
 </p>
 
@@ -514,7 +694,8 @@ Delivery available all over Iraq
 
 <section class="info">
 
-<h2 class="section-title">
+
+<h2 class="title">
 
 ⭐ آراء الزبائن
 
@@ -538,7 +719,53 @@ Delivery available all over Iraq
 
 <br>
 
-تجربة جميلة وسرعة في التوصيل
+توصيل سريع وتعامل مميز
+
+</p>
+
+
+<p>
+
+⭐⭐⭐⭐⭐
+
+<br>
+
+تجربة جميلة مع منتجات ROOH CARE
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="info">
+
+
+<h2 class="title">
+
+🚚 التوصيل
+
+</h2>
+
+
+<p>
+
+نوفر التوصيل لجميع محافظات العراق
+
+<br>
+
+Delivery available all over Iraq
+
+<br><br>
+
+📱 WhatsApp:
+
+<br>
+
+07706136665
 
 </p>
 
@@ -550,10 +777,10 @@ Delivery available all over Iraq
 
 
 <a class="whatsapp-float" 
-href="https://wa.me/9647706136665" 
+href="https://wa.me/9647706136665"
 target="_blank">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+💚
 
 </a>
 
@@ -567,7 +794,7 @@ ROOH CARE © 2026
 
 <br>
 
-Skin & Hair Care Store
+Korean Beauty & Skin Care Store
 
 </footer>
 
