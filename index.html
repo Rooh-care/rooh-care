@@ -4,12 +4,14 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ROOH CARE | Korean Beauty Store</title>
+<title>ROOH CARE | متجر العناية الكورية</title>
 
 
 <style>
+
 
 *{
 box-sizing:border-box;
@@ -20,10 +22,11 @@ body{
 
 margin:0;
 font-family:Arial, sans-serif;
-background:#fbf7f2;
+background:#faf7f1;
 color:#333;
 
 }
+
 
 
 /* Header */
@@ -48,132 +51,224 @@ max-width:85%;
 .banner{
 
 width:100%;
-max-width:1000px;
 height:300px;
 object-fit:cover;
-border-radius:25px;
+border-radius:30px;
 margin-top:20px;
 
 }
+
 
 
 .subtitle{
 
 font-size:18px;
 line-height:2;
-margin-top:20px;
+margin:20px 0;
 
 }
 
 
 
-/* Buttons */
-
-.order{
-
-display:inline-block;
-background:#25D366;
-color:white;
-padding:14px 30px;
-border-radius:35px;
-text-decoration:none;
-font-weight:bold;
-transition:.3s;
-
-}
 
 
-.order:hover{
-
-transform:scale(1.05);
-
-}
-
-
-
-/* Sections */
+/* Titles */
 
 .title{
 
 text-align:center;
-color:#98754b;
 font-size:28px;
+color:#a47c45;
 margin:35px 0 20px;
 
 }
 
 
+
+
+
+/* Boxes */
+
+
 .info{
 
 background:white;
+
 margin:20px 15px;
-padding:25px;
-border-radius:25px;
+
+padding:30px;
+
+border-radius:30px;
+
 text-align:center;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 
 }
+
 
 
 .info p{
 
 line-height:2;
+
 font-size:17px;
 
 }
 
 
 
-/* Trust bar */
+
+
+/* Brand */
+
+.brand-box{
+
+background:linear-gradient(135deg,#fff,#f3e6d2);
+
+margin:25px 15px;
+
+padding:35px 20px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+
+.brand-box h2{
+
+color:#b08a55;
+
+font-size:32px;
+
+}
+
+
+
+
+
+/* Trust */
+
 
 .trust{
 
 display:flex;
+
 flex-wrap:wrap;
+
 justify-content:center;
+
 gap:15px;
+
 padding:20px;
 
 }
 
 
+
 .trust div{
 
 background:white;
-padding:18px;
-border-radius:20px;
+
+padding:20px;
+
 width:220px;
+
+border-radius:25px;
+
 text-align:center;
+
 box-shadow:0 5px 15px rgba(0,0,0,.08);
 
 }
 
 
 
+
+/* Categories */
+
+
+.category-list{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+padding:15px;
+
+}
+
+
+
+.category-list div{
+
+background:white;
+
+padding:20px;
+
+width:150px;
+
+border-radius:25px;
+
+text-align:center;
+
+color:#a47c45;
+
+font-weight:bold;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+
+
 /* Products */
+
 
 .products{
 
 display:flex;
+
 flex-wrap:wrap;
+
 justify-content:center;
+
 gap:25px;
+
 padding:20px;
 
 }
+
 
 
 .card{
 
 background:white;
+
 width:310px;
+
 padding:20px;
-border-radius:25px;
+
+border-radius:30px;
+
 text-align:center;
-box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+box-shadow:0 8px 25px rgba(0,0,0,.1);
+
 transition:.3s;
 
 }
+
 
 
 .card:hover{
@@ -183,82 +278,121 @@ transform:translateY(-5px);
 }
 
 
+
 .card img{
 
 width:100%;
+
 height:270px;
+
 object-fit:contain;
+
 border-radius:20px;
 
 }
 
 
+
 .card h2{
 
 font-size:20px;
-color:#98754b;
+
+color:#a47c45;
+
 line-height:1.6;
 
 }
 
 
-.card p{
-
-line-height:1.7;
-
-}
-
 
 .rating{
 
-color:#d39b35;
+color:#d59a2c;
+
 font-size:20px;
 
 }
 
 
+
 .available{
 
 color:green;
+
 font-weight:bold;
 
 }
 
 
+
 .price{
 
-font-size:23px;
+font-size:24px;
+
 font-weight:bold;
+
 color:#b07b3c;
+
 margin:15px;
 
 }
 
 
 
-/* WhatsApp Floating */
+.order{
 
-.whatsapp-float{
+display:inline-block;
+
+background:linear-gradient(135deg,#25D366,#128C7E);
+
+color:white;
+
+padding:15px 35px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+box-shadow:0 5px 15px rgba(37,211,102,.3);
+
+}.whatsapp-float{
 
 position:fixed;
+
 bottom:25px;
+
 right:25px;
+
 width:62px;
+
 height:62px;
+
 background:#25D366;
+
 border-radius:50%;
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
+
 font-size:30px;
+
 color:white;
+
 text-decoration:none;
+
 box-shadow:0 5px 20px rgba(0,0,0,.3);
-z-index:999;
+
+z-index:9999;
 
 animation:pulse 2s infinite;
 
 }
+
 
 
 @keyframes pulse{
@@ -272,13 +406,47 @@ transform:scale(1.1);
 }
 
 
+
 footer{
 
 text-align:center;
+
 padding:30px;
+
 color:#777;
 
 }
+
+
+
+
+
+@media(max-width:600px){
+
+
+.banner{
+
+height:220px;
+
+}
+
+
+.card{
+
+width:95%;
+
+}
+
+
+.title{
+
+font-size:24px;
+
+}
+
+
+}
+
 
 
 </style>
@@ -286,7 +454,9 @@ color:#777;
 </head>
 
 
+
 <body>
+
 
 
 <header>
@@ -299,10 +469,13 @@ color:#777;
 </div>
 
 
+
 <img class="banner" src="images/banner.png.jpg" alt="ROOH CARE">
 
 
+
 <div class="subtitle">
+
 
 عناية كورية أصلية لبشرة أكثر إشراقاً ✨
 
@@ -318,6 +491,39 @@ Authentic Korean Beauty Care
 
 
 </header>
+
+
+
+
+
+<section class="brand-box">
+
+
+<h2>
+
+ROOH CARE ✨
+
+</h2>
+
+
+<p>
+
+اكتشفي جمال بشرتك مع منتجات عناية مختارة بعناية
+
+<br>
+
+Premium Korean Beauty Products
+
+</p>
+
+
+</section>
+
+
+
+
+
+
 
 <section class="trust">
 
@@ -344,13 +550,14 @@ Iraq Delivery
 
 <br>
 
-منتجات عناية مختارة
+منتجات مختارة بعناية
 
 <br>
 
 Quality Care
 
 </div>
+
 
 
 
@@ -370,6 +577,7 @@ Fast Order
 
 
 
+
 <div>
 
 🔒
@@ -385,13 +593,96 @@ Trusted Service
 </div>
 
 
+
 </section>
 
 
 
 
 
-<section class="info">
+
+<section>
+
+
+<h2 class="title">
+
+🛍️ تسوق حسب الفئة
+
+</h2>
+
+
+
+<div class="category-list">
+
+
+<div>
+
+🧼
+
+<br>
+
+تنظيف البشرة
+
+</div>
+
+
+
+<div>
+
+💧
+
+<br>
+
+الترطيب
+
+</div>
+
+
+
+
+<div>
+
+✨
+
+<br>
+
+السيرومات
+
+</div>
+
+
+
+
+<div>
+
+☀️
+
+<br>
+
+واقي الشمس
+
+</div>
+
+
+
+
+<div>
+
+💆
+
+<br>
+
+العناية بالشعر
+
+</div>
+
+
+
+</div>
+
+
+</section>
+  <section class="info">
 
 
 <h2 class="title">
@@ -407,11 +698,11 @@ Trusted Service
 
 <br>
 
-خصومات وعروض خاصة قريباً
+خصومات وباقات خاصة قريباً
 
 <br>
 
-Special beauty offers coming soon ✨
+Special Beauty Offers ✨
 
 </p>
 
@@ -427,26 +718,18 @@ Special beauty offers coming soon ✨
 
 <h2 class="title">
 
-لماذا ROOH CARE؟
+🔥 الأكثر مبيعاً
 
 </h2>
 
 
 <p>
 
-✨ منتجات عناية مختارة بعناية
+منتجاتنا الأكثر طلباً من عملائنا
 
 <br>
 
-✨ منتجات كورية للعناية بالبشرة والشعر
-
-<br>
-
-✨ أسعار مناسبة وجودة عالية
-
-<br>
-
-✨ خدمة طلب سهلة وسريعة عبر الواتساب
+Our Best Sellers
 
 </p>
 
@@ -459,15 +742,18 @@ Special beauty offers coming soon ✨
 
 <h2 class="title">
 
-منتجاتنا
+🧴 منتجات العناية بالبشرة
 
 </h2>
 
 
 
-
 <section class="products">
-  
+
+
+
+
+
 <div class="card">
 
 
@@ -513,13 +799,17 @@ DABO Charcoal Foam Cleanser
 </div>
 
 
+
 <a class="order" 
+
 href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب DABO Charcoal Foam Cleanser%0Aالسعر: 12000 دينار"
+
 target="_blank">
 
 🟢 اطلب الآن
 
 </a>
+
 
 
 </div>
@@ -575,8 +865,11 @@ DABO Black Snail Foam Cleanser
 </div>
 
 
+
 <a class="order" 
+
 href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب DABO Black Snail Foam Cleanser%0Aالسعر: 12000 دينار"
+
 target="_blank">
 
 🟢 اطلب الآن
@@ -584,8 +877,8 @@ target="_blank">
 </a>
 
 
-</div>
 
+</div>
 
 
 
@@ -638,8 +931,11 @@ DABO Hyaluronic Acid Foam Cleanser
 </div>
 
 
+
 <a class="order" 
+
 href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب DABO Hyaluronic Acid Foam Cleanser%0Aالسعر: 12000 دينار"
+
 target="_blank">
 
 🟢 اطلب الآن
@@ -647,11 +943,51 @@ target="_blank">
 </a>
 
 
+
 </div>
 
 
 
 </section>
+  <section class="info">
+
+
+<h2 class="title">
+
+🎁 باقات ROOH CARE
+
+</h2>
+
+
+<p>
+
+✨ باقة تنظيف البشرة
+
+<br>
+
+غسول + تونر + ترطيب
+
+<br><br>
+
+💧 باقة الترطيب والعناية اليومية
+
+<br>
+
+منتجات مختارة لبشرة أكثر نضارة
+
+<br><br>
+
+🌸 باقات كاملة قادمة قريباً
+
+</p>
+
+
+</section>
+
+
+
+
+
 
 <section class="info">
 
@@ -669,7 +1005,7 @@ target="_blank">
 
 <br>
 
-غسول + تونر + سيروم + واقي شمس
+غسول → تونر → سيروم → واقي شمس
 
 <br><br>
 
@@ -677,16 +1013,17 @@ target="_blank">
 
 <br>
 
-تنظيف البشرة + ترطيب + عناية مكثفة
+تنظيف → ترطيب → عناية مكثفة
 
 <br><br>
 
-ROOH CARE helps you build your beauty routine ✨
+ROOH CARE Beauty Routine ✨
 
 </p>
 
 
 </section>
+
 
 
 
@@ -713,6 +1050,7 @@ ROOH CARE helps you build your beauty routine ✨
 </p>
 
 
+
 <p>
 
 ⭐⭐⭐⭐⭐
@@ -724,18 +1062,20 @@ ROOH CARE helps you build your beauty routine ✨
 </p>
 
 
+
 <p>
 
 ⭐⭐⭐⭐⭐
 
 <br>
 
-تجربة جميلة مع منتجات ROOH CARE
+تجربة جميلة مع ROOH CARE
 
 </p>
 
 
 </section>
+
 
 
 
@@ -757,7 +1097,7 @@ ROOH CARE helps you build your beauty routine ✨
 
 <br>
 
-Delivery available all over Iraq
+Delivery Available All Over Iraq
 
 <br><br>
 
@@ -771,12 +1111,7 @@ Delivery available all over Iraq
 
 
 </section>
-
-
-
-
-
-<a class="whatsapp-float" 
+  <a class="whatsapp-float" 
 href="https://wa.me/9647706136665"
 target="_blank">
 
@@ -796,10 +1131,16 @@ ROOH CARE © 2026
 
 Korean Beauty & Skin Care Store
 
+<br>
+
+Made with care ✨
+
 </footer>
+
 
 
 
 </body>
 
 </html>
+  
