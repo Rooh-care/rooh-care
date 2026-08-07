@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ROOH CARE | المنتجات</title><link rel="stylesheet" href="style.css"><style>
 
-/* ==================================================
-   ROOH CARE PRODUCTS - ISOLATED STYLE
-================================================== */
+/* ================================
+   PRODUCTS PAGE
+================================ */
 
 .rc-page{
     max-width:1200px;
@@ -18,9 +18,9 @@
 }
 
 
-/* ==================================================
+/* ================================
    PRODUCT CARD
-================================================== */
+================================ */
 
 .rc-card{
     background:#fff;
@@ -36,7 +36,6 @@
     height:270px;
     object-fit:contain;
     display:block;
-    margin:auto;
 }
 
 .rc-card h2{
@@ -68,9 +67,9 @@
 }
 
 
-/* ==================================================
-   PRODUCT BUTTONS
-================================================== */
+/* ================================
+   BUTTONS
+================================ */
 
 .rc-buttons{
     display:flex;
@@ -84,9 +83,11 @@
     display:flex !important;
 
     align-items:center !important;
+
     justify-content:center !important;
 
     width:50% !important;
+
     min-height:48px !important;
 
     padding:12px 8px !important;
@@ -110,14 +111,12 @@
     outline:0 !important;
 
     cursor:pointer !important;
-
 }
 
 
-/* التفاصيل */
+/* زر التفاصيل */
 
 .rc-details,
-.rc-details:link,
 .rc-details:visited,
 .rc-details:hover,
 .rc-details:active{
@@ -134,10 +133,9 @@
 }
 
 
-/* الطلب */
+/* زر الطلب */
 
 .rc-order,
-.rc-order:link,
 .rc-order:visited,
 .rc-order:hover,
 .rc-order:active{
@@ -154,63 +152,9 @@
 }
 
 
-/* ==================================================
-   WHATSAPP FLOAT
-================================================== */
-
-#rc-wa{
-
-    position:fixed !important;
-
-    right:18px !important;
-    bottom:18px !important;
-
-    width:58px !important;
-    height:58px !important;
-
-    min-width:58px !important;
-    min-height:58px !important;
-
-    max-width:58px !important;
-    max-height:58px !important;
-
-    display:flex !important;
-
-    align-items:center !important;
-    justify-content:center !important;
-
-    padding:0 !important;
-    margin:0 !important;
-
-    background:#25D366 !important;
-
-    color:#fff !important;
-
-    border-radius:50% !important;
-
-    border:0 !important;
-
-    font-family:Arial,sans-serif !important;
-
-    font-size:27px !important;
-
-    line-height:1 !important;
-
-    text-align:center !important;
-
-    text-decoration:none !important;
-
-    box-shadow:
-    0 6px 20px rgba(0,0,0,.25) !important;
-
-    z-index:999999 !important;
-}
-
-
-/* ==================================================
+/* ================================
    FOOTER
-   مهم: منع الـ Footer من أن يصبح رابطًا
-================================================== */
+================================ */
 
 #rc-footer{
 
@@ -221,8 +165,6 @@
     width:100% !important;
 
     height:auto !important;
-
-    min-height:120px !important;
 
     margin:30px 0 0 !important;
 
@@ -240,43 +182,99 @@
 
     line-height:2 !important;
 
-    z-index:1 !important;
+    float:none !important;
 
+    clear:both !important;
+
+    z-index:1 !important;
 }
 
 
-/* التأكد أن نص الفوتر ليس رابطًا */
+/* ================================
+   WHATSAPP BUTTON
+================================ */
 
-#rc-footer a{
+#rc-wa{
 
-    position:static !important;
+    position:fixed !important;
 
-    display:inline !important;
+    right:18px !important;
 
-    width:auto !important;
+    bottom:18px !important;
 
-    height:auto !important;
+    width:60px !important;
 
-    background:none !important;
+    height:60px !important;
 
-    color:#777 !important;
+    min-width:60px !important;
+
+    min-height:60px !important;
+
+    max-width:60px !important;
+
+    max-height:60px !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
 
     padding:0 !important;
 
     margin:0 !important;
 
-    border-radius:0 !important;
+    background:#25D366 !important;
 
-    box-shadow:none !important;
+    color:#fff !important;
+
+    border:0 !important;
+
+    border-radius:50% !important;
+
+    font-family:Arial,sans-serif !important;
+
+    font-size:28px !important;
+
+    line-height:1 !important;
+
+    text-align:center !important;
 
     text-decoration:none !important;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.25) !important;
+
+    z-index:999999 !important;
 
 }
 
 
-/* ==================================================
+/* منع أي تأثير من style.css القديم */
+
+#rc-wa:link,
+#rc-wa:visited,
+#rc-wa:hover,
+#rc-wa:active{
+
+    position:fixed !important;
+
+    right:18px !important;
+
+    bottom:18px !important;
+
+    width:60px !important;
+
+    height:60px !important;
+
+    color:#fff !important;
+
+    text-decoration:none !important;
+}
+
+
+/* ================================
    MOBILE
-================================================== */
+================================ */
 
 @media(max-width:600px){
 
@@ -301,18 +299,26 @@
         width:100% !important;
     }
 
-    #rc-wa{
+    #rc-wa,
+    #rc-wa:link,
+    #rc-wa:visited,
+    #rc-wa:hover,
+    #rc-wa:active{
 
         right:15px !important;
+
         bottom:15px !important;
 
         width:55px !important;
+
         height:55px !important;
 
         min-width:55px !important;
+
         min-height:55px !important;
 
         max-width:55px !important;
+
         max-height:55px !important;
 
         font-size:25px !important;
@@ -320,31 +326,41 @@
 
 }
 
-</style></head><body><!-- ==================================================
+</style></head><body><!-- ================================
      NAVIGATION
-================================================== --><nav class="navbar"><a href="index.html">🏠 الرئيسية</a>
-
-<a href="products.html">🧴 المنتجات</a>
-
-</nav><!-- ==================================================
+================================ --><nav class="navbar"><a href="index.html">
+🏠 الرئيسية
+</a><a href="products.html">
+🧴 المنتجات
+</a></nav><!-- ================================
      HEADER
-================================================== --><header><div class="logo"><img
+================================ --><header><div class="logo"><img
 src="images/logo.png"
 alt="ROOH CARE"
 
 «»
 
-</div><h1>ROOH CARE</h1><p>منتجات العناية بالبشرة والشعر</p></header><!-- ==================================================
+</div><h1>
+ROOH CARE
+</h1><p>
+منتجات العناية بالبشرة والشعر
+</p></header><!-- ================================
      PRODUCTS
-================================================== --><main class="rc-page"><h2 class="title">
+================================ --><main class="rc-page"><h2 class="title">
 جميع المنتجات
 </h2><section
 id="rc-products"
 class="rc-products"
-></section></main><!-- ==================================================
+></section></main><!-- ================================
+     FOOTER
+================================ --><footer id="rc-footer"><div>
+<strong>ROOH CARE © 2026</strong>
+</div><div>
+Premium Korean Beauty Store
+</div></footer><!-- ================================
      WHATSAPP
-     هذا الرابط مغلق هنا بشكل صريح
-================================================== --><a
+     مستقل تماماً عن FOOTER
+================================ --><a
 id="rc-wa"
 href="https://wa.me/9647706136665"
 target="_blank"
@@ -353,154 +369,149 @@ aria-label="واتساب ROOH CARE"
 
 «💬</a>»
 
-<!-- ==================================================
-     FOOTER
-     مستقل تمامًا عن رابط واتساب
-================================================== --><footer id="rc-footer"><div>
-<strong>ROOH CARE © 2026</strong>
-</div><div>
-Premium Korean Beauty Store
-</div></footer><script src="products.js"></script><script>
+<!-- ================================
+     PRODUCTS JS
+================================ --><script src="products.js"></script><script>
 
 (function(){
 
-const container =
-document.getElementById("rc-products");
+    const container =
+    document.getElementById("rc-products");
 
 
-if(
-typeof products === "undefined" ||
-!Array.isArray(products)
-){
+    if(
+        typeof products === "undefined" ||
+        !Array.isArray(products)
+    ){
 
-container.innerHTML =
-"<p>تعذر تحميل المنتجات.</p>";
+        container.innerHTML =
+        "<p>تعذر تحميل المنتجات.</p>";
 
-return;
+        return;
 
-}
-
-
-products.forEach(function(product,index){
-
-const card =
-document.createElement("article");
-
-card.className="rc-card";
+    }
 
 
-/* الصورة */
+    products.forEach(function(product,index){
 
-const image =
-document.createElement("img");
+        const card =
+        document.createElement("article");
 
-image.src=product.image;
-
-image.alt=product.nameAr;
-
-image.loading="lazy";
-
-card.appendChild(image);
+        card.className="rc-card";
 
 
-/* الاسم */
+        /* الصورة */
 
-const title =
-document.createElement("h2");
+        const image =
+        document.createElement("img");
 
-title.textContent=
-product.nameAr;
+        image.src=product.image;
 
+        image.alt=product.nameAr;
 
-const english =
-document.createElement("span");
+        image.loading="lazy";
 
-english.textContent=
-product.nameEn;
-
-title.appendChild(english);
-
-card.appendChild(title);
+        card.appendChild(image);
 
 
-/* الوصف */
+        /* الاسم */
 
-const description =
-document.createElement("p");
+        const title =
+        document.createElement("h2");
 
-description.textContent=
-product.description;
-
-card.appendChild(description);
+        title.textContent=
+        product.nameAr;
 
 
-/* السعر */
+        const english =
+        document.createElement("span");
 
-const price =
-document.createElement("div");
+        english.textContent=
+        product.nameEn;
 
-price.className="rc-price";
+        title.appendChild(english);
 
-price.textContent=
-product.price+" دينار";
-
-card.appendChild(price);
+        card.appendChild(title);
 
 
-/* الأزرار */
+        /* الوصف */
 
-const buttons =
-document.createElement("div");
+        const description =
+        document.createElement("p");
 
-buttons.className="rc-buttons";
+        description.textContent=
+        product.description;
 
-
-/* تفاصيل */
-
-const details =
-document.createElement("a");
-
-details.className="rc-details";
-
-details.href=
-"product-details.html?id="+index;
-
-details.textContent=
-"✨ عرض التفاصيل";
+        card.appendChild(description);
 
 
-/* واتساب */
+        /* السعر */
 
-const order =
-document.createElement("a");
+        const price =
+        document.createElement("div");
 
-order.className="rc-order";
+        price.className="rc-price";
 
-order.href=
-"https://wa.me/9647706136665?text="+
-encodeURIComponent(
-"السلام عليكم، أريد طلب "+
-product.nameAr
-);
+        price.textContent=
+        product.price+" دينار";
 
-order.target="_blank";
-
-order.rel=
-"noopener noreferrer";
-
-order.textContent=
-"🟢 اطلب الآن";
+        card.appendChild(price);
 
 
-buttons.appendChild(details);
+        /* الأزرار */
 
-buttons.appendChild(order);
+        const buttons =
+        document.createElement("div");
 
-card.appendChild(buttons);
+        buttons.className="rc-buttons";
 
-container.appendChild(card);
 
-});
+        /* التفاصيل */
+
+        const details =
+        document.createElement("a");
+
+        details.className="rc-details";
+
+        details.href=
+        "product-details.html?id="+index;
+
+        details.textContent=
+        "✨ عرض التفاصيل";
+
+
+        /* الطلب */
+
+        const order =
+        document.createElement("a");
+
+        order.className="rc-order";
+
+        order.href=
+        "https://wa.me/9647706136665?text="+
+        encodeURIComponent(
+            "السلام عليكم، أريد طلب "+
+            product.nameAr
+        );
+
+        order.target="_blank";
+
+        order.rel=
+        "noopener noreferrer";
+
+        order.textContent=
+        "🟢 اطلب الآن";
+
+
+        buttons.appendChild(details);
+
+        buttons.appendChild(order);
+
+        card.appendChild(buttons);
+
+        container.appendChild(card);
+
+    });
 
 })();
 
