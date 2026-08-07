@@ -1,32 +1,74 @@
-const products = [
-
-{
-nameAr:"غسول دابو بالفحم",
-nameEn:"DABO Charcoal Foam Cleanser",
-price:"12000",
-image:"images/charcoal.jpg.png",
-category:"تنظيف البشرة",
-description:"تنظيف عميق للبشرة وتقليل الدهون والشوائب"
-},
+const container = document.getElementById("products-container");
 
 
-{
-nameAr:"غسول دابو الحلزون الأسود",
-nameEn:"DABO Black Snail Foam Cleanser",
-price:"12000",
-image:"images/snail.jpg.png",
-category:"تنظيف البشرة",
-description:"تنظيف لطيف مع ترطيب وعناية للبشرة"
-},
+if(container){
+
+products.forEach(product => {
 
 
-{
-nameAr:"غسول دابو بالهيالورونيك",
-nameEn:"DABO Hyaluronic Acid Foam Cleanser",
-price:"12000",
-image:"images/hyaluronic.jpg.png",
-category:"تنظيف البشرة",
-description:"تنظيف عميق مع دعم ترطيب البشرة"
+container.innerHTML += `
+
+<div class="card">
+
+
+<img src="${product.image}" alt="${product.nameEn}">
+
+
+<h2>
+
+${product.nameAr}
+
+<br>
+
+${product.nameEn}
+
+</h2>
+
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+<p class="available">
+
+متوفر الآن ✅
+
+</p>
+
+
+<p>
+
+${product.description}
+
+</p>
+
+
+<div class="price">
+
+${product.price} IQD
+
+</div>
+
+
+<a class="order"
+
+href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب ${product.nameAr}"
+
+target="_blank">
+
+🟢 اطلب الآن
+
+</a>
+
+
+</div>
+
+`;
+
+});
+
+
 }
-
-];
