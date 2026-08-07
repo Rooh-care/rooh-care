@@ -31,22 +31,13 @@ description:"تنظيف عميق مع ترطيب البشرة"
 
 
 {
-
 nameAr:"سيروم الكولاجين",
-
-nameEn:"USHAS COLLAGEN SERUM ",
-
+nameEn:"USHAS COLLAGEN SERUM",
 price:"10000",
-
-image:"images/jpg. Serum",
-
+image:"images/serum-collagen.jpg",
 category:"السيرومات",
-
-description:"تعزيز نظارة و شد البشرة
-ترطيب عالي"
-
+description:"تعزيز نضارة وشد البشرة، ترطيب عالي"
 },
-
 
 
 {
@@ -54,7 +45,7 @@ nameAr:"سيروم فيتامين سي",
 nameEn:"USHAS VIT C",
 price:"10000",
 image:"images/Picsart_26-08-07_19-52-10-117.jpg",
-category:"سيروم",
+category:"السيرومات",
 description:"تغذية البشرة، محاربة أكسدة البشرة، ترطيب عالي، نضارة للبشرة"
 }
 
