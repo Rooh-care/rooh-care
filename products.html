@@ -1,150 +1,325 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>
 ROOH CARE | المنتجات
-</title>
+</title><link rel="stylesheet"
+href="style.css"><style>
 
-<link rel="stylesheet" href="style.css">
+/* =========================
+   PRODUCTS PAGE
+========================= */
 
-</head>
+.products-page{
 
+max-width:1200px;
 
-<body>
+margin:auto;
 
+padding:20px 15px 50px;
 
-<nav class="navbar">
+}
 
-<a href="index.html">
+.products{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(270px,310px));
+
+justify-content:center;
+
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+
+padding:20px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+overflow:hidden;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:270px;
+
+object-fit:contain;
+
+display:block;
+
+margin:auto;
+
+}
+
+.card h2{
+
+font-size:20px;
+
+color:#a47c45;
+
+line-height:1.7;
+
+margin:15px 0 10px;
+
+}
+
+.card p{
+
+font-size:15px;
+
+color:#555;
+
+min-height:55px;
+
+}
+
+.price{
+
+font-size:23px;
+
+font-weight:bold;
+
+color:#b07b3c;
+
+margin:15px 0;
+
+}
+
+.card-buttons{
+
+display:flex;
+
+gap:10px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.details,
+.order{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+min-height:48px;
+
+padding:12px 20px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+font-size:15px;
+
+line-height:1.2;
+
+white-space:nowrap;
+
+}
+
+.details{
+
+background:
+linear-gradient(
+135deg,
+#b08a55,
+#8d6637
+);
+
+color:#fff !important;
+
+}
+
+.order{
+
+background:
+linear-gradient(
+135deg,
+#25D366,
+#128C7E
+);
+
+color:#fff !important;
+
+}
+
+.details:hover,
+.order:hover{
+
+transform:translateY(-2px);
+
+opacity:.9;
+
+}
+
+.empty{
+
+text-align:center;
+
+padding:50px;
+
+font-size:20px;
+
+color:#777;
+
+}
+
+@media(max-width:600px){
+
+.products{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+.card{
+
+width:100%;
+
+}
+
+.card img{
+
+height:240px;
+
+}
+
+.card-buttons{
+
+flex-direction:column;
+
+}
+
+.details,
+.order{
+
+width:100%;
+
+}
+
+}
+
+</style></head><body><!-- =========================
+     NAVBAR
+========================= --><nav class="navbar"><a href="index.html">
 🏠 الرئيسية
-</a>
-
-
-<a href="products.html">
+</a><a href="products.html">
 🧴 المنتجات
-</a>
-
-
-<a href="add-product.html">
-⚙️ إدارة المنتجات
-</a>
-
-
-<a href="https://wa.me/9647706136665" target="_blank">
+</a><a href="https://wa.me/9647706136665"
+target="_blank"
+rel="noopener">
 💬 واتساب
 </a>
 
-</nav>
+</nav><!-- =========================
+     HEADER
+========================= --><header><div class="logo"><img
+src="images/logo.png"
+alt="ROOH CARE"
 
+«»
 
-
-
-<header>
-
-<div class="logo">
-
-<img src="images/logo.png" alt="ROOH CARE">
-
-</div>
-
-
-<h1>
+</div><h1>
 ROOH CARE
-</h1>
-
-
-<p>
+</h1><p>
 منتجات العناية الكورية الأصلية
-</p>
-
-
-</header>
-
-
-
-
-
-<h2 class="title">
+</p></header><!-- =========================
+     PRODUCTS
+========================= --><main class="products-page"><h2 class="title">
 جميع المنتجات
-</h2>
-
-
-
-
-
-<section class="products" id="products-container">
-
-</section>
-
-
-
-
-
-
-<a class="whatsapp-float"
-
+</h2><section
+class="products"
+id="products-container"
+></section></main><!-- =========================
+     WHATSAPP
+========================= --><a
+class="whatsapp-float"
 href="https://wa.me/9647706136665"
+target="_blank"
+rel="noopener"
+aria-label="واتساب"
 
-target="_blank">
+«»
 
 💚
-
 </a>
 
+<!-- =========================
+     FOOTER
+========================= --><footer>ROOH CARE © 2026
+
+<br>Premium Korean Beauty Store
+
+</footer><!-- =========================
+     PRODUCTS DATA
+========================= --><script src="products.js"></script><!-- =========================
+     DISPLAY PRODUCTS
+========================= --><script>
+
+const container =
+document.getElementById(
+"products-container"
+);
 
 
+if(
+typeof products === "undefined" ||
+!Array.isArray(products) ||
+products.length === 0
+){
+
+container.innerHTML = `
+<div class="empty">
+لا توجد منتجات حاليًا
+</div>
+`;
+
+}else{
 
 
-
-
-<footer>
-
-ROOH CARE © 2026
-
-<br>
-
-Premium Korean Beauty Store
-
-</footer>
-
-
-
-
-
-
-<script src="products.js"></script>
-
-
-<script>
-
-
-const container = document.getElementById("products-container");
-
-
-
-if(typeof products !== "undefined"){
-
-
-
-products.forEach(product => {
-
-
+products.forEach(
+(product,index)=>{
 
 container.innerHTML += `
 
+<article class="card">
 
-<div class="card">
-
-
-
-<img src="${product.image}" alt="${product.nameAr}">
-
+<img
+src="${product.image}"
+alt="${product.nameAr}"
+loading="lazy"
+onerror="this.style.display='none'"
+>
 
 
 <h2>
@@ -153,83 +328,56 @@ ${product.nameAr}
 
 <br>
 
+<small>
 ${product.nameEn}
+</small>
 
 </h2>
 
 
-
 <p>
-
 ${product.description}
-
 </p>
-
-
 
 
 <div class="price">
 
-${product.price} دينار
+${product.price}
+دينار
 
 </div>
 
 
+<div class="card-buttons">
 
-
-
-<a class="details"
-
-href="product-details.html?product=${encodeURIComponent(product.nameEn)}"
-
+<a
+class="details"
+href="product-details.html?id=${index}"
+>
 ✨ عرض التفاصيل
-
 </a>
 
 
-
-
-<a class="order"
-
-href="https://wa.me/9647706136665?text=اريد طلب ${product.nameAr}"
-
-target="_blank">
-
+<a
+class="order"
+href="https://wa.me/9647706136665?text=${encodeURIComponent(
+"السلام عليكم، أريد طلب " +
+product.nameAr
+)}"
+target="_blank"
+rel="noopener"
+>
 🟢 اطلب الآن
-
 </a>
-
-
 
 </div>
 
-
+</article>
 
 `;
 
-
-
 });
 
-
-
 }
 
-else{
-
-
-container.innerHTML =
-
-"<h3>لم يتم تحميل المنتجات</h3>";
-
-}
-
-
-
-</script>
-
-
-
-</body>
-
-</html>
+</script></body></html>
