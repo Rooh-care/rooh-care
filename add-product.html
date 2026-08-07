@@ -8,104 +8,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>
-ROOH CARE | إضافة منتج
+ROOH CARE | إدارة المنتجات
 </title>
 
-
-<style>
-
-body{
-
-font-family:Tahoma,Arial;
-
-background:#faf7f1;
-
-padding:20px;
-
-}
-
-
-.box{
-
-max-width:600px;
-
-margin:auto;
-
-background:white;
-
-padding:30px;
-
-border-radius:30px;
-
-box-shadow:0 8px 25px #ddd;
-
-}
-
-
-h1{
-
-text-align:center;
-
-color:#a47c45;
-
-}
-
-
-input,textarea{
-
-width:100%;
-
-padding:15px;
-
-margin:10px 0;
-
-border-radius:15px;
-
-border:1px solid #ddd;
-
-font-size:16px;
-
-}
-
-
-
-button{
-
-width:100%;
-
-padding:15px;
-
-border:0;
-
-border-radius:30px;
-
-background:#a47c45;
-
-color:white;
-
-font-size:18px;
-
-cursor:pointer;
-
-}
-
-
-#result{
-
-margin-top:20px;
-
-background:#f5f5f5;
-
-padding:15px;
-
-border-radius:15px;
-
-direction:ltr;
-
-}
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -113,7 +19,34 @@ direction:ltr;
 <body>
 
 
-<div class="box">
+<nav class="navbar">
+
+<a href="index.html">
+🏠 الرئيسية
+</a>
+
+
+<a href="products.html">
+🧴 المنتجات
+</a>
+
+
+<a href="add-product.html">
+⚙️ إدارة المنتجات
+</a>
+
+
+</nav>
+
+
+
+<header>
+
+<div class="logo">
+
+<img src="images/logo.png">
+
+</div>
 
 
 <h1>
@@ -121,27 +54,63 @@ direction:ltr;
 </h1>
 
 
+<p>
+أنشئ كود المنتج بسهولة ثم أضفه إلى products.js
+</p>
+
+</header>
+
+
+
+
+
+<section class="info">
+
+
+<h2 class="title">
+بيانات المنتج
+</h2>
+
+
 
 <input id="nameAr" placeholder="اسم المنتج بالعربي">
+
+
+<br><br>
 
 
 <input id="nameEn" placeholder="اسم المنتج بالإنجليزي">
 
 
+<br><br>
+
+
 <input id="price" placeholder="السعر">
 
 
-<input id="image" placeholder="اسم الصورة مثال images/product.png">
+<br><br>
 
 
-<input id="category" placeholder="القسم">
+<input id="image" placeholder="اسم الصورة مثال: serum.jpg">
+
+
+<br><br>
+
+
+<input id="category" placeholder="التصنيف">
+
+
+<br><br>
 
 
 <textarea id="description" placeholder="وصف المنتج"></textarea>
 
 
+<br><br>
 
-<button onclick="createProduct()">
+
+
+<button class="main-btn" onclick="createProduct()">
 
 إنشاء كود المنتج
 
@@ -149,11 +118,53 @@ direction:ltr;
 
 
 
-<div id="result"></div>
+</section>
 
 
 
-</div>
+
+
+
+<section class="info">
+
+
+<h2 class="title">
+الكود الناتج
+</h2>
+
+
+<textarea id="result"
+
+style="width:90%;height:300px;direction:ltr;text-align:left;">
+
+</textarea>
+
+
+<br>
+
+
+<button class="main-btn" onclick="copyCode()">
+
+📋 نسخ الكود
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+ROOH CARE © 2026
+
+</footer>
+
 
 
 
@@ -165,21 +176,46 @@ direction:ltr;
 function createProduct(){
 
 
+let nameAr =
+document.getElementById("nameAr").value;
+
+
+let nameEn =
+document.getElementById("nameEn").value;
+
+
+let price =
+document.getElementById("price").value;
+
+
+let image =
+document.getElementById("image").value;
+
+
+let category =
+document.getElementById("category").value;
+
+
+let description =
+document.getElementById("description").value;
+
+
+
 let code = `
 
 {
 
-nameAr:"${nameAr.value}",
+nameAr:"${nameAr}",
 
-nameEn:"${nameEn.value}",
+nameEn:"${nameEn}",
 
-price:"${price.value}",
+price:"${price}",
 
-image:"${image.value}",
+image:"images/${image}",
 
-category:"${category.value}",
+category:"${category}",
 
-description:"${description.value}"
+description:"${description}"
 
 },
 
@@ -187,7 +223,28 @@ description:"${description.value}"
 
 
 
-document.getElementById("result").innerText = code;
+document.getElementById("result").value = code;
+
+
+}
+
+
+
+
+function copyCode(){
+
+
+let text =
+document.getElementById("result");
+
+
+text.select();
+
+
+navigator.clipboard.writeText(text.value);
+
+
+alert("تم نسخ كود المنتج");
 
 
 }
