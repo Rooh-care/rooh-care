@@ -3,42 +3,237 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<h1>ROOH CARE TEST</h1>
+
+<title>ROOH CARE | متجر العناية</title>
+
 <style>
-body {
-font-family: Arial;
-background:#faf6f0;
+body{
+font-family: Arial, sans-serif;
+background:#faf7f2;
+margin:0;
+color:#333;
+}
+
+header{
+background:white;
 text-align:center;
-padding:30px;
+padding:35px 15px;
 }
-h1 {
-color:#8b6b45;
+
+.logo{
+font-size:38px;
+font-weight:bold;
+color:#98754b;
+letter-spacing:2px;
 }
-button {
+
+.subtitle{
+font-size:18px;
+line-height:1.8;
+}
+
+.lang{
+margin-top:15px;
+font-size:14px;
+color:#777;
+}
+
+
+.products{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:30px 15px;
+}
+
+
+.card{
+background:white;
+width:280px;
+border-radius:20px;
+padding:20px;
+box-shadow:0 5px 20px #ddd;
+text-align:center;
+}
+
+
+.card img{
+width:100%;
+height:260px;
+object-fit:contain;
+border-radius:15px;
+}
+
+
+h2{
+color:#98754b;
+font-size:20px;
+}
+
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#b07b3c;
+margin:15px;
+}
+
+
+.order{
 background:#25D366;
 color:white;
-border:0;
-padding:15px 25px;
+padding:13px 25px;
 border-radius:30px;
-font-size:18px;
+text-decoration:none;
+display:inline-block;
 }
+
+
+.info{
+background:white;
+margin:20px;
+padding:20px;
+border-radius:20px;
+text-align:center;
+}
+
+
+footer{
+text-align:center;
+padding:20px;
+color:#777;
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<h1>ROOH CARE</h1>
 
-<h2>مرحباً بكم في متجر العناية بالبشرة والشعر ✨</h2>
+<header>
+
+<div class="logo">
+ROOH CARE
+</div>
+
+<div class="subtitle">
+منتجات العناية بالبشرة والشعر ✨
+<br>
+Skin & Hair Care Products
+<br>
+توصيل لجميع محافظات العراق
+<br>
+Delivery All Over Iraq
+</div>
+
+</header>
+
+
+
+<section class="products">
+
+
+<div class="card">
+
+<img src="images/charcoal.jpg">
+
+<h2>
+غسول دابو بالفحم
+<br>
+DABO Charcoal Foam Cleanser
+</h2>
 
 <p>
-منتجات أصلية مختارة بعناية<br>
-توصيل لجميع محافظات العراق
+تنظيف عميق للبشرة وتقليل الدهون والشوائب
 </p>
 
-<a href="https://wa.me/9647706136665">
-<button>اطلب عبر واتساب</button>
+<div class="price">
+12,000 IQD
+</div>
+
+<a class="order" href="https://wa.me/9647706136665">
+اطلب الآن | Order Now
 </a>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="images/snail.jpg">
+
+<h2>
+غسول دابو الحلزون الأسود
+<br>
+DABO Black Snail Foam Cleanser
+</h2>
+
+<p>
+تنظيف وعناية لطيفة للبشرة
+</p>
+
+<div class="price">
+12,000 IQD
+</div>
+
+<a class="order" href="https://wa.me/9647706136665">
+اطلب الآن | Order Now
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="images/hyaluronic.jpg">
+
+<h2>
+غسول دابو بالهيالورونيك
+<br>
+DABO Hyaluronic Acid Foam Cleanser
+</h2>
+
+<p>
+تنظيف عميق مع ترطيب البشرة
+</p>
+
+<div class="price">
+12,000 IQD
+</div>
+
+<a class="order" href="https://wa.me/9647706136665">
+اطلب الآن | Order Now
+</a>
+
+</div>
+
+
+</section>
+
+
+
+<div class="info">
+
+🚚 التوصيل متوفر لجميع محافظات العراق
+
+<br><br>
+
+📱 WhatsApp:
+07706136665
+
+</div>
+
+
+
+<footer>
+ROOH CARE © 2026
+</footer>
+
 
 </body>
 </html>
