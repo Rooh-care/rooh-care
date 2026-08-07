@@ -2,294 +2,76 @@
 
 <html lang="ar" dir="rtl">
 
+
 <head>
 
+
 <meta charset="UTF-8">
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <title>
+
 ROOH CARE | المنتجات
+
 </title>
 
 
+<link rel="stylesheet" href="style.css">
 
-<style>
-
-
-*{
-
-box-sizing:border-box;
-
-}
-
-
-
-body{
-
-margin:0;
-
-font-family:Arial,sans-serif;
-
-background:#faf7f1;
-
-color:#333;
-
-}
-
-
-
-/* Header */
-
-
-header{
-
-background:white;
-
-text-align:center;
-
-padding:25px 15px;
-
-}
-
-
-
-.logo img{
-
-width:180px;
-
-max-width:80%;
-
-}
-
-
-
-.title{
-
-text-align:center;
-
-font-size:28px;
-
-color:#a47c45;
-
-margin:30px 0;
-
-}
-
-
-
-
-
-/* Categories */
-
-
-.categories{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:15px;
-
-padding:20px;
-
-}
-
-
-
-.categories div{
-
-background:white;
-
-padding:20px;
-
-width:150px;
-
-border-radius:25px;
-
-text-align:center;
-
-color:#a47c45;
-
-font-weight:bold;
-
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-
-}
-
-
-
-
-
-/* Products */
-
-
-.products{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:25px;
-
-padding:20px;
-
-}
-
-
-
-.card{
-
-background:white;
-
-width:310px;
-
-padding:20px;
-
-border-radius:30px;
-
-text-align:center;
-
-box-shadow:0 8px 25px rgba(0,0,0,.1);
-
-}
-
-
-
-.card img{
-
-width:100%;
-
-height:270px;
-
-object-fit:contain;
-
-border-radius:20px;
-
-}
-
-
-
-.card h2{
-
-color:#a47c45;
-
-font-size:20px;
-
-line-height:1.6;
-
-}
-
-
-
-.rating{
-
-color:#d59a2c;
-
-font-size:20px;
-
-}
-
-
-
-.available{
-
-color:green;
-
-font-weight:bold;
-
-}
-
-
-
-.price{
-
-font-size:23px;
-
-font-weight:bold;
-
-color:#b07b3c;
-
-margin:15px;
-
-}
-
-.order{
-
-display:inline-block;
-
-background:linear-gradient(135deg,#25D366,#128C7E);
-
-color:white;
-
-padding:15px 35px;
-
-border-radius:40px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-}
-
-
-
-.whatsapp-float{
-
-position:fixed;
-
-bottom:25px;
-
-right:25px;
-
-width:62px;
-
-height:62px;
-
-background:#25D366;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:30px;
-
-color:white;
-
-text-decoration:none;
-
-box-shadow:0 5px 20px rgba(0,0,0,.3);
-
-}
-
-
-
-footer{
-
-text-align:center;
-
-padding:30px;
-
-color:#777;
-
-}
-
-
-</style>
 
 </head>
 
 
+
 <body>
+
+
+
+<!-- شريط التنقل -->
+
+
+<nav class="navbar">
+
+
+<a href="index.html">
+
+🏠 الرئيسية
+
+</a>
+
+
+
+<a href="products.html">
+
+🧴 المنتجات
+
+</a>
+
+
+
+<a href="index.html#offers">
+
+🎁 العروض
+
+</a>
+
+
+
+<a href="https://wa.me/9647706136665" target="_blank">
+
+💬 واتساب
+
+</a>
+
+
+</nav>
+
+
+
+
 
 
 <header>
@@ -297,22 +79,41 @@ color:#777;
 
 <div class="logo">
 
+
 <img src="images/logo.png" alt="ROOH CARE">
+
 
 </div>
 
 
-<h1 class="title">
+
+<h1>
 
 🧴 منتجات ROOH CARE
 
 </h1>
 
 
+
+<p>
+
+منتجات عناية كورية مختارة بعناية
+
+<br>
+
+Premium Korean Beauty Products
+
+</p>
+
+
 </header>
 
 
 
+
+
+
+<!-- التصنيفات -->
 
 
 <h2 class="title">
@@ -323,45 +124,72 @@ color:#777;
 
 
 
+
 <div class="categories">
 
 
 <div>
+
 🧼
+
 <br>
-تنظيف البشرة
+
+غسول البشرة
+
 </div>
 
 
+
 <div>
+
 💧
+
 <br>
+
 الترطيب
+
 </div>
 
 
+
 <div>
+
 ✨
+
 <br>
+
 السيرومات
+
 </div>
 
 
+
 <div>
+
 ☀️
+
 <br>
+
 واقي الشمس
+
 </div>
+
 
 
 <div>
+
 💆
+
 <br>
+
 العناية بالشعر
+
 </div>
 
 
 </div>
+
+
 
 
 
@@ -375,19 +203,23 @@ color:#777;
 
 
 
+
 <section class="products">
 
 
 
 
+<!-- المنتج الأول -->
+
 
 <div class="card">
 
 
-<img src="images/charcoal.jpg.png">
+<img src="images/charcoal.jpg.png" alt="DABO Charcoal">
 
 
 <h2>
+
 
 غسول دابو بالفحم
 
@@ -395,7 +227,9 @@ color:#777;
 
 DABO Charcoal Foam Cleanser
 
+
 </h2>
+
 
 
 <div class="rating">
@@ -405,11 +239,13 @@ DABO Charcoal Foam Cleanser
 </div>
 
 
+
 <p class="available">
 
 متوفر الآن ✅
 
 </p>
+
 
 
 <p>
@@ -419,6 +255,7 @@ DABO Charcoal Foam Cleanser
 </p>
 
 
+
 <div class="price">
 
 12,000 IQD
@@ -426,13 +263,16 @@ DABO Charcoal Foam Cleanser
 </div>
 
 
+
 <a class="order"
 
-href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب DABO Charcoal Foam Cleanser"
+href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب غسول دابو بالفحم"
 
 target="_blank">
 
+
 🟢 اطلب الآن
+
 
 </a>
 
@@ -440,18 +280,17 @@ target="_blank">
 </div>
 
 
-
-
-
+<!-- المنتج الثاني -->
 
 
 <div class="card">
 
 
-<img src="images/snail.jpg.png">
+<img src="images/snail.jpg.png" alt="DABO Black Snail">
 
 
 <h2>
+
 
 غسول دابو الحلزون الأسود
 
@@ -459,7 +298,9 @@ target="_blank">
 
 DABO Black Snail Foam Cleanser
 
+
 </h2>
+
 
 
 <div class="rating">
@@ -469,6 +310,7 @@ DABO Black Snail Foam Cleanser
 </div>
 
 
+
 <p class="available">
 
 متوفر الآن ✅
@@ -476,11 +318,13 @@ DABO Black Snail Foam Cleanser
 </p>
 
 
+
 <p>
 
-تنظيف لطيف وعناية يومية للبشرة
+تنظيف لطيف مع عناية وترطيب للبشرة
 
 </p>
+
 
 
 <div class="price">
@@ -490,13 +334,16 @@ DABO Black Snail Foam Cleanser
 </div>
 
 
+
 <a class="order"
 
-href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب DABO Black Snail Foam Cleanser"
+href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب غسول دابو الحلزون الأسود"
 
 target="_blank">
 
+
 🟢 اطلب الآن
+
 
 </a>
 
@@ -508,14 +355,17 @@ target="_blank">
 
 
 
+<!-- المنتج الثالث -->
+
 
 <div class="card">
 
 
-<img src="images/hyaluronic.jpg.png">
+<img src="images/hyaluronic.jpg.png" alt="DABO Hyaluronic">
 
 
 <h2>
+
 
 غسول دابو بالهيالورونيك
 
@@ -523,7 +373,9 @@ target="_blank">
 
 DABO Hyaluronic Acid Foam Cleanser
 
+
 </h2>
+
 
 
 <div class="rating">
@@ -533,11 +385,13 @@ DABO Hyaluronic Acid Foam Cleanser
 </div>
 
 
+
 <p class="available">
 
 متوفر الآن ✅
 
 </p>
+
 
 
 <p>
@@ -547,6 +401,7 @@ DABO Hyaluronic Acid Foam Cleanser
 </p>
 
 
+
 <div class="price">
 
 12,000 IQD
@@ -554,18 +409,22 @@ DABO Hyaluronic Acid Foam Cleanser
 </div>
 
 
+
 <a class="order"
 
-href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب DABO Hyaluronic Acid Foam Cleanser"
+href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب غسول دابو بالهيالورونيك"
 
 target="_blank">
 
+
 🟢 اطلب الآن
+
 
 </a>
 
 
 </div>
+
 
 
 
@@ -575,13 +434,19 @@ target="_blank">
 
 
 
+
+<!-- واتساب عائم -->
+
+
 <a class="whatsapp-float"
 
 href="https://wa.me/9647706136665"
 
 target="_blank">
 
+
 💚
+
 
 </a>
 
@@ -589,18 +454,29 @@ target="_blank">
 
 
 
+
+
 <footer>
+
 
 ROOH CARE © 2026
 
 <br>
 
-Korean Beauty Store
+Korean Beauty & Skin Care Store
+
+<br>
+
+Premium Care For Your Beauty ✨
+
 
 </footer>
 
 
 
+
+
 </body>
 
-</html>  
+
+</html>
