@@ -13,7 +13,7 @@ description:"تنظيف عميق للبشرة وتقليل الدهون والش
 nameAr:"سيروم فيتامين سي",
 nameEn:"USHAS VIT C",
 price:"10000",
-image:"images/Picsart_26-08-07_19-52-10-117.jpg",
+image:"images/vitc-serum.jpg",
 category:"السيرومات",
 description:"تغذية البشرة، محاربة أكسدة البشرة، ترطيب عالي، نضارة للبشرة"
 }
