@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ROOH CARE</title>
+
+<style>
+body{
+font-family: Arial;
+background:#faf7f2;
+margin:0;
+color:#333;
+}
+
+header{
+background:#fff;
+text-align:center;
+padding:30px;
+}
+
+.logo{
+font-size:35px;
+font-weight:bold;
+color:#8b6b45;
+}
+
+header p{
+font-size:18px;
+}
+
+.products{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:white;
+width:280px;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 15px #ddd;
+text-align:center;
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+}
+
+.price{
+color:#8b6b45;
+font-size:20px;
+font-weight:bold;
+}
+
+.whatsapp{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+margin-top:15px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#fff;
+margin-top:30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">ROOH CARE</div>
+
+<p>
+منتجات العناية بالبشرة والشعر ✨
+<br>
+توصيل لجميع محافظات العراق
+</p>
+
+</header>
+
+
+<section class="products">
+
+
+<div class="card">
+
+<img src="images/product1.jpg">
+
+<h3>منتج العناية الأول</h3>
+
+<p>
+عناية وترطيب للبشرة بجودة عالية
+</p>
+
+<div class="price">
+السعر: يحدد لاحقاً
+</div>
+
+<a class="whatsapp" href="https://wa.me/9647706136665">
+اطلب عبر واتساب
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="images/product2.jpg">
+
+<h3>منتج العناية الثاني</h3>
+
+<p>
+منتجات مختارة بعناية لبشرتك
+</p>
+
+<div class="price">
+السعر: يحدد لاحقاً
+</div>
+
+<a class="whatsapp" href="https://wa.me/9647706136665">
+اطلب عبر واتساب
+</a>
+
+</div>
+
+
+</section>
+
+
+<footer>
+ROOH CARE © 2026
+</footer>
+
+
+</body>
+</html>
