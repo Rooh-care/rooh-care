@@ -8,27 +8,27 @@
 
 <title>ROOH CARE | متجر العناية</title>
 
-
 <style>
 
 *{
 box-sizing:border-box;
 }
 
-
 body{
 
-font-family: Arial, sans-serif;
 margin:0;
+font-family:Arial, sans-serif;
 background:#faf7f2;
 color:#333;
 
 }
 
 
+/* الهيدر */
+
 header{
 
-background:white;
+background:#ffffff;
 text-align:center;
 padding:25px 15px;
 
@@ -43,12 +43,11 @@ max-width:80%;
 }
 
 
-
 .banner{
 
 width:100%;
-max-width:900px;
-height:260px;
+max-width:1000px;
+height:280px;
 object-fit:cover;
 border-radius:25px;
 margin-top:20px;
@@ -56,37 +55,71 @@ margin-top:20px;
 }
 
 
-
 .subtitle{
 
 font-size:18px;
-line-height:1.8;
+line-height:1.9;
 margin-top:20px;
 
 }
 
 
 
-.products{
+/* الأقسام */
 
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-padding:30px 15px;
+.section-title{
+
+text-align:center;
+color:#98754b;
+font-size:28px;
+margin:35px 0 15px;
 
 }
 
+
+
+.info{
+
+background:white;
+margin:20px 15px;
+padding:25px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+
+.info p{
+
+line-height:2;
+font-size:17px;
+
+}
+
+
+
+/* المنتجات */
+
+.products{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:20px;
+
+}
 
 
 .card{
 
 background:white;
 width:300px;
-border-radius:25px;
 padding:20px;
+border-radius:25px;
 text-align:center;
-box-shadow:0 5px 20px #ddd;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
 
 }
 
@@ -107,6 +140,7 @@ border-radius:20px;
 
 font-size:20px;
 color:#98754b;
+line-height:1.6;
 
 }
 
@@ -117,7 +151,6 @@ color:#98754b;
 line-height:1.7;
 
 }
-
 
 
 .price{
@@ -136,7 +169,7 @@ margin:15px;
 display:inline-block;
 background:#25D366;
 color:white;
-padding:13px 25px;
+padding:14px 30px;
 border-radius:30px;
 text-decoration:none;
 font-weight:bold;
@@ -144,31 +177,50 @@ font-weight:bold;
 }
 
 
-
-.info{
-
-background:white;
-margin:25px 15px;
-padding:25px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 5px 15px #eee;
-
-}
-
-
-
-.info h2{
-
-color:#98754b;
-
-}
-
-
+/* زر الواتساب العائم */
 
 .whatsapp-float{
 
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+width:62px;
+height:62px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 5px 15px rgba(0,0,0,.25);
+z-index:999;
+animation:pulse 2s infinite;
 
+}
+
+
+.whatsapp-float img{
+
+width:38px;
+height:38px;
+
+}
+
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
 
 
 footer{
@@ -180,41 +232,6 @@ color:#777;
 }
 
 
-<style>
-
-.whatsapp-float{
-  animation:pulse 2s infinite;
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-width:65px;
-height:65px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:32px;
-text-decoration:none;
-box-shadow:0 5px 15px #999;
-z-index:999;
-}
-@keyframes pulse{
-
-0%{
-transform:scale(1);
-}
-
-50%{
-transform:scale(1.1);
-}
-
-100%{
-transform:scale(1);
-}
-
-  }
 </style>
 
 </head>
@@ -256,24 +273,43 @@ Delivery All Over Iraq
 
 
 </header>
+
 <section class="info">
 
-<h2>
+<h2 class="section-title">
+
 🎁 عروض ROOH CARE
+
 </h2>
 
+
 <p>
-اكتشف أفضل عروض العناية بالبشرة والشعر
+
+اكتشف أفضل منتجات العناية بالبشرة والشعر
+
 <br>
+
 Special offers on Korean beauty products
+
+<br>
+
+جودة عالية واختيار بعناية ✨
+
 </p>
 
 </section>
+
+
+
+
 <section class="info">
 
-<h2>
+<h2 class="section-title">
+
 لماذا ROOH CARE؟
+
 </h2>
+
 
 <p>
 
@@ -281,19 +317,30 @@ Special offers on Korean beauty products
 
 <br>
 
-✨ منتجات كورية بجودة عالية
+✨ منتجات كورية للعناية بالبشرة والشعر
 
 <br>
 
-✨ عناية بالبشرة والشعر
+✨ أسعار مناسبة وخدمة مميزة
 
 <br>
 
-✨ خدمة طلب سهلة عبر الواتساب
+✨ توصيل لجميع محافظات العراق
 
 </p>
 
 </section>
+
+
+
+
+
+<h2 class="section-title">
+
+منتجاتنا
+
+</h2>
+
 
 
 
@@ -303,7 +350,9 @@ Special offers on Korean beauty products
 
 <div class="card">
 
-<img src="images/charcoal.jpg.png" alt="DABO Charcoal">
+
+<img src="images/charcoal.jpg.png" alt="DABO Charcoal Foam Cleanser">
+
 
 <h2>
 
@@ -342,9 +391,12 @@ DABO Charcoal Foam Cleanser
 
 
 
+
 <div class="card">
 
-<img src="images/snail.jpg.png" alt="DABO Snail">
+
+<img src="images/snail.jpg.png" alt="DABO Black Snail Foam Cleanser">
+
 
 <h2>
 
@@ -383,9 +435,13 @@ DABO Black Snail Foam Cleanser
 
 
 
+
+
 <div class="card">
 
-<img src="images/hyaluronic.jpg.png" alt="DABO Hyaluronic">
+
+<img src="images/hyaluronic.jpg.png" alt="DABO Hyaluronic Acid Foam Cleanser">
+
 
 <h2>
 
@@ -422,15 +478,12 @@ DABO Hyaluronic Acid Foam Cleanser
 </div>
 
 
+
 </section>
-
-
-
 
 <section class="info">
 
-
-<h2>
+<h2 class="section-title">
 
 🚚 التوصيل
 
@@ -439,7 +492,7 @@ DABO Hyaluronic Acid Foam Cleanser
 
 <p>
 
-نوفر التوصيل لجميع محافظات العراق
+نوفر خدمة التوصيل لجميع محافظات العراق
 
 <br>
 
@@ -458,33 +511,56 @@ Delivery available all over Iraq
 
 
 
-<a class="whatsapp-float" href="https://wa.me/9647706136665" target="_blank">
 
-💬
+<section class="info">
+
+<h2 class="section-title">
+
+⭐ آراء الزبائن
+
+</h2>
+
+
+<p>
+
+⭐⭐⭐⭐⭐
+
+<br>
+
+منتجات رائعة وجودة ممتازة
+
+</p>
+
+
+<p>
+
+⭐⭐⭐⭐⭐
+
+<br>
+
+تجربة جميلة وسرعة في التوصيل
+
+</p>
+
+
+</section>
+
+
+
+
+
+<a class="whatsapp-float" 
+href="https://wa.me/9647706136665" 
+target="_blank">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 
 </a>
 
 
 
-<section class="info">
 
-<h2>
-آراء الزبائن
-</h2>
 
-<p>
-⭐⭐⭐⭐⭐
-<br>
-منتجات رائعة وجودة ممتازة
-</p>
-
-<p>
-⭐⭐⭐⭐⭐
-<br>
-تجربة جميلة وسرعة بالتوصيل
-</p>
-
-</section>
 <footer>
 
 ROOH CARE © 2026
