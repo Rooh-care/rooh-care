@@ -27,26 +27,16 @@ price:"12000",
 image:"images/hyaluronic.jpg.png",
 category:"تنظيف البشرة",
 description:"تنظيف عميق مع ترطيب البشرة"
-}
-
+},
 
 
 {
-
-nameAr:"سيروم فيتامين سي ",
-
+nameAr:"سيروم فيتامين سي",
 nameEn:"USHAS VIT C",
-
-price:"10,000",
-
-image:"Picsart_26-08-07_19-52-10-117.jpg",
-
+price:"10000",
+image:"images/Picsart_26-08-07_19-52-10-117.jpg",
 category:"سيروم",
+description:"تغذية البشرة، محاربة أكسدة البشرة، ترطيب عالي، نضارة للبشرة"
+}
 
-description:"تغذية البشرة
-محاربة اكسدة البشرة
-ترطيب عالي
-نظارة للبشرة"
-
-},
 ];
