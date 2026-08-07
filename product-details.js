@@ -1,70 +1,82 @@
-const productDetails = {
+const params = new URLSearchParams(window.location.search);
 
-charcoal:{
+const productName = params.get("product");
 
-nameAr:"غسول دابو بالفحم",
 
-nameEn:"DABO Charcoal Foam Cleanser",
-
-image:"images/charcoal.jpg.png",
-
-price:"12000 دينار",
-
-description:
-"تنظيف عميق للبشرة وتقليل الدهون والشوائب",
-
-benefits:[
-"تنظيف المسام بعمق",
-"تقليل الدهون الزائدة",
-"منح البشرة إحساساً بالانتعاش"
-]
-
-},
+const product = products.find(item => 
+item.nameEn === productName
+);
 
 
 
-snail:{
-
-nameAr:"غسول دابو الحلزون الأسود",
-
-nameEn:"DABO Black Snail Foam Cleanser",
-
-image:"images/snail.jpg.png",
-
-price:"12000 دينار",
-
-description:
-"تنظيف وترطيب لطيف للبشرة",
-
-benefits:[
-"ترطيب البشرة",
-"تهدئة البشرة",
-"المساعدة في تحسين مظهر البشرة"
-]
-
-},
+const container = document.getElementById("product-details");
 
 
 
-hyaluronic:{
+if(product){
 
-nameAr:"غسول دابو الهيالورونيك",
 
-nameEn:"DABO Hyaluronic Acid Foam Cleanser",
+container.innerHTML = `
 
-image:"images/hyaluronic.jpg.png",
 
-price:"12000 دينار",
+<div class="card">
 
-description:
-"تنظيف عميق مع دعم ترطيب البشرة",
 
-benefits:[
-"ترطيب مكثف",
-"الحفاظ على نعومة البشرة",
-"مناسب للاستخدام اليومي"
-]
+<img src="${product.image}" alt="${product.nameAr}">
+
+
+<h2>
+
+${product.nameAr}
+
+<br>
+
+${product.nameEn}
+
+</h2>
+
+
+<p>
+
+${product.description}
+
+</p>
+
+
+
+<div class="price">
+
+${product.price} دينار
+
+</div>
+
+
+
+<a class="order"
+
+href="https://wa.me/9647706136665?text=اريد طلب ${product.nameAr}"
+
+target="_blank">
+
+🟢 اطلب الآن
+
+</a>
+
+
+</div>
+
+
+`;
+
+
 
 }
 
-};
+else{
+
+
+container.innerHTML =
+
+"<h2>المنتج غير موجود</h2>";
+
+}
