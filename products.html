@@ -1,16 +1,16 @@
 <!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ROOH CARE | المنتجات</title><link rel="stylesheet" href="style.css"><style>
 
-/* =====================================================
-   ROOH CARE - PRODUCTS PAGE
-===================================================== */
+/* ==================================================
+   ROOH CARE PRODUCTS - ISOLATED STYLE
+================================================== */
 
-.rc-products-page{
+.rc-page{
     max-width:1200px;
     margin:0 auto;
-    padding:25px 15px 100px;
+    padding:20px 15px 100px;
 }
 
-.rc-products-grid{
+.rc-products{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(270px,310px));
     justify-content:center;
@@ -18,49 +18,49 @@
 }
 
 
-/* =========================
+/* ==================================================
    PRODUCT CARD
-========================= */
+================================================== */
 
 .rc-card{
-    background:#ffffff;
-    border-radius:30px;
+    background:#fff;
     padding:20px;
+    border-radius:30px;
     text-align:center;
     box-shadow:0 8px 25px rgba(0,0,0,.08);
     overflow:hidden;
 }
 
-.rc-card-image{
+.rc-card img{
     width:100%;
     height:270px;
     object-fit:contain;
     display:block;
-    margin:0 auto 10px;
+    margin:auto;
 }
 
-.rc-card-title{
+.rc-card h2{
     color:#a47c45;
     font-size:20px;
     line-height:1.7;
-    margin:10px 0;
+    margin:12px 0;
 }
 
-.rc-card-title-en{
+.rc-card h2 span{
     display:block;
     color:#777;
     font-size:14px;
     font-weight:normal;
 }
 
-.rc-card-description{
+.rc-card p{
     color:#555;
     font-size:15px;
     line-height:1.8;
     min-height:55px;
 }
 
-.rc-card-price{
+.rc-price{
     color:#b07b3c;
     font-size:23px;
     font-weight:bold;
@@ -68,44 +68,30 @@
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* ==================================================
+   PRODUCT BUTTONS
+================================================== */
 
 .rc-buttons{
     display:flex;
     gap:10px;
-    width:100%;
     margin-top:15px;
 }
 
-
-/*
-   مهم:
-   هذه الأزرار تستخدم أسماء جديدة
-   ولا تعتمد على .details أو .order
-*/
-
-.rc-details-button,
-.rc-order-button{
+.rc-details,
+.rc-order{
 
     display:flex !important;
 
     align-items:center !important;
-
     justify-content:center !important;
 
     width:50% !important;
-
     min-height:48px !important;
 
     padding:12px 8px !important;
 
     border-radius:40px !important;
-
-    border:0 !important;
-
-    outline:0 !important;
 
     font-family:Tahoma,Arial,sans-serif !important;
 
@@ -117,22 +103,24 @@
 
     text-align:center !important;
 
-    cursor:pointer !important;
-
     text-decoration:none !important;
 
-    -webkit-text-decoration:none !important;
+    border:0 !important;
+
+    outline:0 !important;
+
+    cursor:pointer !important;
 
 }
 
 
 /* التفاصيل */
 
-.rc-details-button,
-.rc-details-button:link,
-.rc-details-button:visited,
-.rc-details-button:hover,
-.rc-details-button:active{
+.rc-details,
+.rc-details:link,
+.rc-details:visited,
+.rc-details:hover,
+.rc-details:active{
 
     background:linear-gradient(
         135deg,
@@ -140,20 +128,19 @@
         #8d6637
     ) !important;
 
-    color:#ffffff !important;
+    color:#fff !important;
 
     text-decoration:none !important;
-
 }
 
 
-/* واتساب */
+/* الطلب */
 
-.rc-order-button,
-.rc-order-button:link,
-.rc-order-button:visited,
-.rc-order-button:hover,
-.rc-order-button:active{
+.rc-order,
+.rc-order:link,
+.rc-order:visited,
+.rc-order:hover,
+.rc-order:active{
 
     background:linear-gradient(
         135deg,
@@ -161,60 +148,51 @@
         #128C7E
     ) !important;
 
-    color:#ffffff !important;
+    color:#fff !important;
 
     text-decoration:none !important;
-
 }
 
 
-/* =========================
-   FLOATING WHATSAPP
-========================= */
+/* ==================================================
+   WHATSAPP FLOAT
+================================================== */
 
-#rc-whatsapp-float{
+#rc-wa{
 
     position:fixed !important;
 
     right:18px !important;
-
     bottom:18px !important;
 
-    width:60px !important;
+    width:58px !important;
+    height:58px !important;
 
-    height:60px !important;
+    min-width:58px !important;
+    min-height:58px !important;
 
-    min-width:60px !important;
-
-    max-width:60px !important;
-
-    min-height:60px !important;
-
-    max-height:60px !important;
-
-    padding:0 !important;
-
-    margin:0 !important;
+    max-width:58px !important;
+    max-height:58px !important;
 
     display:flex !important;
 
     align-items:center !important;
-
     justify-content:center !important;
+
+    padding:0 !important;
+    margin:0 !important;
 
     background:#25D366 !important;
 
-    color:#ffffff !important;
-
-    border:0 !important;
+    color:#fff !important;
 
     border-radius:50% !important;
 
+    border:0 !important;
+
     font-family:Arial,sans-serif !important;
 
-    font-size:28px !important;
-
-    font-weight:normal !important;
+    font-size:27px !important;
 
     line-height:1 !important;
 
@@ -222,53 +200,95 @@
 
     text-decoration:none !important;
 
-    box-shadow:0 6px 20px rgba(0,0,0,.25) !important;
+    box-shadow:
+    0 6px 20px rgba(0,0,0,.25) !important;
 
     z-index:999999 !important;
+}
 
-    cursor:pointer !important;
+
+/* ==================================================
+   FOOTER
+   مهم: منع الـ Footer من أن يصبح رابطًا
+================================================== */
+
+#rc-footer{
+
+    position:relative !important;
+
+    display:block !important;
+
+    width:100% !important;
+
+    height:auto !important;
+
+    min-height:120px !important;
+
+    margin:30px 0 0 !important;
+
+    padding:35px 15px !important;
+
+    background:#fff !important;
+
+    color:#777 !important;
+
+    text-align:center !important;
+
+    font-family:Tahoma,Arial,sans-serif !important;
+
+    font-size:14px !important;
+
+    line-height:2 !important;
+
+    z-index:1 !important;
 
 }
 
 
-/* منع أي تنسيق عام للرابط */
+/* التأكد أن نص الفوتر ليس رابطًا */
 
-#rc-whatsapp-float:link,
-#rc-whatsapp-float:visited,
-#rc-whatsapp-float:hover,
-#rc-whatsapp-float:active{
+#rc-footer a{
 
-    width:60px !important;
+    position:static !important;
 
-    height:60px !important;
+    display:inline !important;
 
-    color:#ffffff !important;
+    width:auto !important;
+
+    height:auto !important;
+
+    background:none !important;
+
+    color:#777 !important;
+
+    padding:0 !important;
+
+    margin:0 !important;
+
+    border-radius:0 !important;
+
+    box-shadow:none !important;
 
     text-decoration:none !important;
 
 }
 
 
-/* =========================
+/* ==================================================
    MOBILE
-========================= */
+================================================== */
 
 @media(max-width:600px){
 
-    .rc-products-page{
+    .rc-page{
         padding:15px 12px 100px;
     }
 
-    .rc-products-grid{
+    .rc-products{
         grid-template-columns:1fr;
-        gap:20px;
     }
 
-    .rc-card{
-        width:100%;
-    }
-
-    .rc-card-image{
+    .rc-card img{
         height:240px;
     }
 
@@ -276,79 +296,76 @@
         flex-direction:column;
     }
 
-    .rc-details-button,
-    .rc-order-button{
+    .rc-details,
+    .rc-order{
         width:100% !important;
     }
 
-    #rc-whatsapp-float{
+    #rc-wa{
 
         right:15px !important;
-
         bottom:15px !important;
 
         width:55px !important;
-
         height:55px !important;
 
         min-width:55px !important;
-
-        max-width:55px !important;
-
         min-height:55px !important;
 
+        max-width:55px !important;
         max-height:55px !important;
 
         font-size:25px !important;
-
     }
 
 }
 
-</style></head><body><!-- =========================
-     NAVBAR
-========================= --><nav class="navbar"><a href="index.html">
-🏠 الرئيسية
-</a><a href="products.html">
-🧴 المنتجات
-</a></nav><!-- =========================
+</style></head><body><!-- ==================================================
+     NAVIGATION
+================================================== --><nav class="navbar"><a href="index.html">🏠 الرئيسية</a>
+
+<a href="products.html">🧴 المنتجات</a>
+
+</nav><!-- ==================================================
      HEADER
-========================= --><header><div class="logo"><img
+================================================== --><header><div class="logo"><img
 src="images/logo.png"
 alt="ROOH CARE"
 
 «»
 
-</div><h1>ROOH CARE</h1><p>منتجات العناية بالبشرة والشعر</p></header><!-- =========================
+</div><h1>ROOH CARE</h1><p>منتجات العناية بالبشرة والشعر</p></header><!-- ==================================================
      PRODUCTS
-========================= --><main class="rc-products-page"><h2 class="title">
+================================================== --><main class="rc-page"><h2 class="title">
 جميع المنتجات
 </h2><section
-id="rc-products-grid"
-class="rc-products-grid"
-></section></main><!-- =========================
-     FLOATING WHATSAPP
-========================= --><a
-id="rc-whatsapp-float"
+id="rc-products"
+class="rc-products"
+></section></main><!-- ==================================================
+     WHATSAPP
+     هذا الرابط مغلق هنا بشكل صريح
+================================================== --><a
+id="rc-wa"
 href="https://wa.me/9647706136665"
 target="_blank"
 rel="noopener noreferrer"
-aria-label="التواصل عبر واتساب"
+aria-label="واتساب ROOH CARE"
 
 «💬</a>»
 
-<!-- =========================
+<!-- ==================================================
      FOOTER
-========================= --><footer>ROOH CARE © 2026
-
-<br>Premium Korean Beauty Store
-
-</footer><script src="products.js"></script><script>
+     مستقل تمامًا عن رابط واتساب
+================================================== --><footer id="rc-footer"><div>
+<strong>ROOH CARE © 2026</strong>
+</div><div>
+Premium Korean Beauty Store
+</div></footer><script src="products.js"></script><script>
 
 (function(){
 
-const grid =
-document.getElementById("rc-products-grid");
+const container =
+document.getElementById("rc-products");
 
 
 if(
@@ -356,7 +373,7 @@ typeof products === "undefined" ||
 !Array.isArray(products)
 ){
 
-grid.innerHTML =
+container.innerHTML =
 "<p>تعذر تحميل المنتجات.</p>";
 
 return;
@@ -377,8 +394,6 @@ card.className="rc-card";
 const image =
 document.createElement("img");
 
-image.className="rc-card-image";
-
 image.src=product.image;
 
 image.alt=product.nameAr;
@@ -393,17 +408,12 @@ card.appendChild(image);
 const title =
 document.createElement("h2");
 
-title.className="rc-card-title";
-
 title.textContent=
 product.nameAr;
 
 
 const english =
 document.createElement("span");
-
-english.className=
-"rc-card-title-en";
 
 english.textContent=
 product.nameEn;
@@ -418,9 +428,6 @@ card.appendChild(title);
 const description =
 document.createElement("p");
 
-description.className=
-"rc-card-description";
-
 description.textContent=
 product.description;
 
@@ -432,8 +439,7 @@ card.appendChild(description);
 const price =
 document.createElement("div");
 
-price.className=
-"rc-card-price";
+price.className="rc-price";
 
 price.textContent=
 product.price+" دينار";
@@ -449,13 +455,12 @@ document.createElement("div");
 buttons.className="rc-buttons";
 
 
-/* زر التفاصيل */
+/* تفاصيل */
 
 const details =
 document.createElement("a");
 
-details.className=
-"rc-details-button";
+details.className="rc-details";
 
 details.href=
 "product-details.html?id="+index;
@@ -464,13 +469,12 @@ details.textContent=
 "✨ عرض التفاصيل";
 
 
-/* زر واتساب */
+/* واتساب */
 
 const order =
 document.createElement("a");
 
-order.className=
-"rc-order-button";
+order.className="rc-order";
 
 order.href=
 "https://wa.me/9647706136665?text="+
@@ -494,7 +498,7 @@ buttons.appendChild(order);
 
 card.appendChild(buttons);
 
-grid.appendChild(card);
+container.appendChild(card);
 
 });
 
