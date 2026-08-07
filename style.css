@@ -2,202 +2,101 @@
 box-sizing:border-box;
 }
 
-
 body{
-
 margin:0;
-
 font-family:Tahoma, Arial, sans-serif;
-
 background:#faf7f1;
-
 color:#333;
-
-line-height:1.8;
-
+line-height:1.7;
+overflow-x:hidden;
 }
 
 
-
-/* =================
-   شريط التنقل
-================= */
-
+/* NAVBAR */
 
 .navbar{
-
-background:white;
-
+background:#fff;
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
-gap:15px;
-
+gap:10px;
 flex-wrap:wrap;
-
-padding:15px;
-
+padding:12px;
 position:sticky;
-
 top:0;
-
 z-index:1000;
-
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-
+box-shadow:0 3px 15px rgba(0,0,0,.08);
 }
-
 
 
 .navbar a{
-
 text-decoration:none;
-
 color:#a47c45;
-
 background:#faf7f1;
-
-padding:10px 22px;
-
-border-radius:30px;
-
+padding:8px 16px;
+border-radius:25px;
 font-weight:bold;
-
-transition:.3s;
-
+font-size:14px;
 }
 
 
-
-.navbar a:hover{
-
-background:#a47c45;
-
-color:white;
-
-}
-
-
-
-
-
-/* =================
-   رأس الصفحة
-================= */
-
+/* HEADER */
 
 header{
-
-text-align:center;
-
 background:white;
-
-padding:25px 15px;
-
+text-align:center;
+padding:20px 10px;
 }
-
 
 
 .logo img{
-
-width:190px;
-
-max-width:85%;
-
+width:150px;
+max-width:80%;
 }
-
 
 
 header h1{
-
 color:#b08a55;
-
-font-size:36px;
-
-margin:20px 0 5px;
-
+font-size:30px;
+margin:15px 0 5px;
 }
-
 
 
 header p{
-
-font-size:18px;
-
+margin:0;
+font-size:16px;
 }
 
 
 
-
-
-/* =================
-   العناوين
-================= */
-
+/* TITLES */
 
 .title{
-
 text-align:center;
-
-font-size:28px;
-
 color:#a47c45;
-
-margin:35px 0 20px;
-
+font-size:25px;
+margin:25px 0;
 }
 
 
 
-
-
-/* =================
-   الصناديق
-================= */
-
-
-.info{
-
-background:white;
-
-margin:25px 15px;
-
-padding:30px;
-
-border-radius:35px;
-
-text-align:center;
-
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-}
-
-
-
-
-
-/* =================
-   المنتجات
-================= */
-
+/* PRODUCTS */
 
 .products{
 
-display:flex;
+display:grid;
 
-justify-content:center;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 
-flex-wrap:wrap;
+gap:20px;
 
-gap:25px;
+padding:15px;
 
-padding:25px;
+max-width:1200px;
+
+margin:auto;
 
 }
-
 
 
 
@@ -205,29 +104,15 @@ padding:25px;
 
 background:white;
 
-width:310px;
+border-radius:25px;
 
-padding:20px;
-
-border-radius:30px;
+padding:18px;
 
 text-align:center;
 
-box-shadow:0 8px 25px rgba(0,0,0,.1);
-
-transition:.3s;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 
 }
-
-
-
-
-.card:hover{
-
-transform:translateY(-8px);
-
-}
-
 
 
 
@@ -235,7 +120,7 @@ transform:translateY(-8px);
 
 width:100%;
 
-height:280px;
+height:250px;
 
 object-fit:contain;
 
@@ -245,154 +130,121 @@ border-radius:20px;
 
 
 
-
 .card h2{
 
-font-size:21px;
+font-size:19px;
 
 color:#a47c45;
 
-line-height:1.7;
+margin:15px 0;
 
 }
-
 
 
 
 .card p{
 
-font-size:16px;
+font-size:15px;
+
+color:#555;
 
 }
 
 
 
-
+/* PRICE */
 
 .price{
 
-font-size:24px;
+font-size:22px;
 
 font-weight:bold;
 
 color:#b07b3c;
 
-margin:15px;
+margin:12px;
 
 }
 
 
 
+/* BUTTONS */
 
 
-/* =================
-   الأزرار
-================= */
-
-
-.main-btn,
-.details{
+.details,
+.order,
+.main-btn{
 
 display:inline-block;
 
-background:linear-gradient(135deg,#b08a55,#8d6637);
+padding:12px 25px;
 
-color:white !important;
-
-padding:14px 30px;
-
-border-radius:40px;
+border-radius:35px;
 
 text-decoration:none;
 
 font-weight:bold;
 
-margin:10px 5px;
+margin:6px;
 
-font-size:15px;
-
-border:none;
-
-cursor:pointer;
+font-size:14px;
 
 transition:.3s;
 
-box-shadow:0 5px 15px rgba(0,0,0,.12);
-
 }
 
 
 
-.main-btn:hover,
-.details:hover{
+.details{
 
-transform:translateY(-3px);
+background:#b08a55;
 
-opacity:.9;
+color:white !important;
 
 }
-
-
 
 
 
 .order{
 
-display:inline-block;
-
-background:linear-gradient(135deg,#25D366,#128C7E);
+background:#25D366;
 
 color:white !important;
 
-padding:14px 30px;
+}
 
-border-radius:40px;
 
-text-decoration:none;
 
-font-weight:bold;
+.main-btn{
 
-margin:10px 5px;
+background:#b08a55;
 
-font-size:15px;
+color:white !important;
 
-transition:.3s;
+border:none;
 
 }
 
 
 
-
-.order:hover{
-
-transform:translateY(-3px);
-
-opacity:.9;
-
-}
-
-
-
-
-
-/* =================
-   واتساب عائم
-================= */
+/* WHATSAPP */
 
 
 .whatsapp-float{
 
 position:fixed;
 
-bottom:25px;
+right:18px;
 
-right:25px;
+bottom:18px;
 
-width:65px;
+width:60px;
 
-height:65px;
+height:60px;
 
 background:#25D366;
+
+color:white;
 
 border-radius:50%;
 
@@ -402,34 +254,23 @@ align-items:center;
 
 justify-content:center;
 
-font-size:32px;
+font-size:28px;
 
-color:white;
-
-text-decoration:none;
-
-box-shadow:0 8px 25px rgba(0,0,0,.3);
-
-z-index:9999;
+z-index:999;
 
 }
 
 
 
-
-
-/* =================
-   الفوتر
-================= */
-
+/* FOOTER */
 
 footer{
 
-text-align:center;
-
 background:white;
 
-padding:35px 15px;
+text-align:center;
+
+padding:25px;
 
 margin-top:30px;
 
@@ -439,37 +280,33 @@ color:#777;
 
 
 
-
-
-/* =================
-   الهاتف
-================= */
-
+/* MOBILE */
 
 @media(max-width:600px){
 
 
+.navbar{
+
+gap:8px;
+
+}
+
+
 .navbar a{
 
-padding:8px 15px;
+padding:7px 12px;
 
-font-size:14px;
-
-}
-
-
-
-header h1{
-
-font-size:28px;
+font-size:12px;
 
 }
 
 
 
-.title{
+.products{
 
-font-size:24px;
+grid-template-columns:1fr;
+
+padding:12px;
 
 }
 
@@ -477,7 +314,7 @@ font-size:24px;
 
 .card{
 
-width:95%;
+width:100%;
 
 }
 
@@ -485,26 +322,32 @@ width:95%;
 
 .card img{
 
-height:250px;
+height:230px;
 
 }
 
 
 
-.whatsapp-float{
+header h1{
 
-width:58px;
-
-height:58px;
-
-font-size:28px;
-
-right:18px;
-
-bottom:18px;
+font-size:25px;
 
 }
 
+
+.title{
+
+font-size:22px;
+
+}
+
+
+.details,
+.order{
+
+width:90%;
+
+}
 
 
 }
