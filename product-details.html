@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ar" dir="rtl">
 
 <head>
@@ -12,9 +11,7 @@
 ROOH CARE | تفاصيل المنتج
 </title>
 
-
 <link rel="stylesheet" href="style.css">
-
 
 </head>
 
@@ -28,11 +25,13 @@ ROOH CARE | تفاصيل المنتج
 🏠 الرئيسية
 </a>
 
-
 <a href="products.html">
 🧴 المنتجات
 </a>
 
+<a href="add-product.html">
+⚙️ إدارة المنتجات
+</a>
 
 <a href="https://wa.me/9647706136665" target="_blank">
 💬 واتساب
@@ -42,29 +41,38 @@ ROOH CARE | تفاصيل المنتج
 
 
 
-
 <header>
+
+<div class="logo">
+
+<img src="images/logo.png" alt="ROOH CARE">
+
+</div>
+
 
 <h1>
 ROOH CARE
 </h1>
 
+
 <p>
 تفاصيل المنتج
 </p>
+
 
 </header>
 
 
 
+<h2 class="title">
+تفاصيل المنتج
+</h2>
 
 
-<section id="product-details" class="card"
-style="margin:30px auto;max-width:500px;">
+
+<section id="product-details" class="products">
 
 </section>
-
-
 
 
 
@@ -81,125 +89,21 @@ target="_blank">
 
 
 
-
-
-
 <footer>
 
 ROOH CARE © 2026
+
+<br>
+
+Premium Korean Beauty Store
 
 </footer>
 
 
 
-
-
+<script src="products.js"></script>
 
 <script src="product-details.js"></script>
-
-
-<script>
-
-
-const params = new URLSearchParams(window.location.search);
-
-
-const productName = params.get("product");
-
-
-const product = productDetails[productName];
-
-
-
-const container = document.getElementById("product-details");
-
-
-
-if(product){
-
-
-
-container.innerHTML = `
-
-
-<img src="${product.image}" alt="${product.nameAr}">
-
-
-
-<h2>
-
-${product.nameAr}
-
-<br>
-
-${product.nameEn}
-
-</h2>
-
-
-
-<p>
-
-${product.description}
-
-</p>
-
-
-
-
-<h3>
-المميزات:
-</h3>
-
-
-
-<ul>
-
-${product.benefits.map(item => `<li>${item}</li>`).join("")}
-
-</ul>
-
-
-
-<h2 class="price">
-
-${product.price}
-
-</h2>
-
-
-
-
-<a class="order"
-
-href="https://wa.me/9647706136665?text=اريد طلب ${product.nameAr}"
-
-target="_blank">
-
-🟢 اطلب الآن
-
-</a>
-
-
-
-`;
-
-
-
-}
-
-else{
-
-
-container.innerHTML =
-
-"<h2>المنتج غير موجود</h2>";
-
-}
-
-
-</script>
-
 
 
 
