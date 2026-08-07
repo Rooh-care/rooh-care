@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+ROOH CARE | إضافة منتج
+</title>
+
+
+<style>
+
+body{
+
+font-family:Tahoma,Arial;
+
+background:#faf7f1;
+
+padding:20px;
+
+}
+
+
+.box{
+
+max-width:600px;
+
+margin:auto;
+
+background:white;
+
+padding:30px;
+
+border-radius:30px;
+
+box-shadow:0 8px 25px #ddd;
+
+}
+
+
+h1{
+
+text-align:center;
+
+color:#a47c45;
+
+}
+
+
+input,textarea{
+
+width:100%;
+
+padding:15px;
+
+margin:10px 0;
+
+border-radius:15px;
+
+border:1px solid #ddd;
+
+font-size:16px;
+
+}
+
+
+
+button{
+
+width:100%;
+
+padding:15px;
+
+border:0;
+
+border-radius:30px;
+
+background:#a47c45;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+
+#result{
+
+margin-top:20px;
+
+background:#f5f5f5;
+
+padding:15px;
+
+border-radius:15px;
+
+direction:ltr;
+
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="box">
+
+
+<h1>
+إضافة منتج جديد
+</h1>
+
+
+
+<input id="nameAr" placeholder="اسم المنتج بالعربي">
+
+
+<input id="nameEn" placeholder="اسم المنتج بالإنجليزي">
+
+
+<input id="price" placeholder="السعر">
+
+
+<input id="image" placeholder="اسم الصورة مثال images/product.png">
+
+
+<input id="category" placeholder="القسم">
+
+
+<textarea id="description" placeholder="وصف المنتج"></textarea>
+
+
+
+<button onclick="createProduct()">
+
+إنشاء كود المنتج
+
+</button>
+
+
+
+<div id="result"></div>
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+function createProduct(){
+
+
+let code = `
+
+{
+
+nameAr:"${nameAr.value}",
+
+nameEn:"${nameEn.value}",
+
+price:"${price.value}",
+
+image:"${image.value}",
+
+category:"${category.value}",
+
+description:"${description.value}"
+
+},
+
+`;
+
+
+
+document.getElementById("result").innerText = code;
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
