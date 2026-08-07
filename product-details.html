@@ -1,71 +1,498 @@
-<!DOCTYPE html>
-
-<html lang="ar" dir="rtl">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>
 ROOH CARE | تفاصيل المنتج
-</title>
+</title><link rel="stylesheet"
+href="style.css"><style>
 
+/* =========================
+   PRODUCT DETAILS
+========================= */
 
-<link rel="stylesheet" href="style.css">
+.details-page{
 
-</head>
+max-width:1000px;
 
+margin:40px auto;
 
-<body>
+padding:20px 15px;
 
+}
 
-<nav class="navbar">
+.product-details{
 
-<a href="index.html">
+background:white;
+
+border-radius:35px;
+
+padding:30px;
+
+box-shadow:
+0 8px 30px rgba(0,0,0,.08);
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:40px;
+
+align-items:center;
+
+}
+
+.product-image{
+
+width:100%;
+
+height:450px;
+
+object-fit:contain;
+
+display:block;
+
+}
+
+.product-info{
+
+text-align:right;
+
+}
+
+.product-info h1{
+
+color:#a47c45;
+
+font-size:30px;
+
+line-height:1.6;
+
+margin-top:0;
+
+}
+
+.product-info h3{
+
+color:#777;
+
+font-weight:normal;
+
+}
+
+.product-description{
+
+font-size:17px;
+
+line-height:2;
+
+color:#555;
+
+}
+
+.product-category{
+
+display:inline-block;
+
+background:#faf7f1;
+
+color:#a47c45;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+margin:10px 0;
+
+}
+
+.product-price{
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#b07b3c;
+
+margin:20px 0;
+
+}
+
+.detail-buttons{
+
+display:flex;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+.detail-buttons a{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:15px 25px;
+
+border-radius:35px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+min-height:50px;
+
+}
+
+.buy-button{
+
+background:
+linear-gradient(
+135deg,
+#25D366,
+#128C7E
+);
+
+color:white !important;
+
+}
+
+.back-button{
+
+background:
+linear-gradient(
+135deg,
+#b08a55,
+#8d6637
+);
+
+color:white !important;
+
+}
+
+.not-found{
+
+background:white;
+
+padding:50px 20px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:
+0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.not-found h1{
+
+color:#a47c45;
+
+}
+
+@media(max-width:700px){
+
+.details-page{
+
+margin:20px auto;
+
+padding:15px;
+
+}
+
+.product-details{
+
+grid-template-columns:1fr;
+
+padding:20px;
+
+gap:20px;
+
+}
+
+.product-image{
+
+height:300px;
+
+}
+
+.product-info{
+
+text-align:center;
+
+}
+
+.product-info h1{
+
+font-size:24px;
+
+}
+
+.detail-buttons{
+
+flex-direction:column;
+
+}
+
+.detail-buttons a{
+
+width:100%;
+
+}
+
+}
+
+</style></head><body><!-- =========================
+     NAVBAR
+========================= --><nav class="navbar"><a href="index.html">
 🏠 الرئيسية
-</a>
-
-
-<a href="products.html">
+</a><a href="products.html">
 🧴 المنتجات
+</a><a href="https://wa.me/9647706136665"
+target="_blank"
+rel="noopener"
+
+«»
+
+💬 واتساب
+</a>
+
+</nav><!-- =========================
+     HEADER
+========================= --><header><div class="logo"><img
+src="images/logo.png"
+alt="ROOH CARE"
+
+«»
+
+</div><h1>
+ROOH CARE
+</h1><p>
+منتجات العناية الكورية الأصلية
+</p></header><!-- =========================
+     PRODUCT
+========================= --><main class="details-page"><div id="product-container"></div></main><!-- =========================
+     WHATSAPP
+========================= --><a
+class="whatsapp-float"
+href="https://wa.me/9647706136665"
+target="_blank"
+rel="noopener"
+aria-label="واتساب"
+
+«»
+
+💚
+</a>
+
+<!-- =========================
+     FOOTER
+========================= --><footer>ROOH CARE © 2026
+
+<br>Premium Korean Beauty Store
+
+</footer><!-- =========================
+     PRODUCTS
+========================= --><script src="products.js"></script><script>
+
+
+const container =
+document.getElementById(
+"product-container"
+);
+
+
+const params =
+new URLSearchParams(
+window.location.search
+);
+
+
+const id =
+parseInt(
+params.get("id")
+);
+
+
+if(
+
+!Array.isArray(products) ||
+
+isNaN(id) ||
+
+id < 0 ||
+
+id >= products.length
+
+){
+
+container.innerHTML = `
+
+<div class="not-found">
+
+<h1>
+المنتج غير موجود
+</h1>
+
+<p>
+عذرًا، لم نتمكن من العثور على المنتج المطلوب.
+</p>
+
+<a
+class="back-button"
+href="products.html"
+style="
+display:inline-flex;
+padding:14px 25px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+background:#a47c45;
+font-weight:bold;
+"
+>
+↩ العودة إلى المنتجات
+</a>
+
+</div>
+
+`;
+
+}else{
+
+
+const product =
+products[id];
+
+
+document.title =
+"ROOH CARE | " +
+product.nameAr;
+
+
+container.innerHTML = `
+
+<div class="product-details">
+
+
+<div>
+
+<img
+
+class="product-image"
+
+src="${product.image}"
+
+alt="${product.nameAr}"
+
+onerror="
+this.style.display='none';
+document.getElementById('image-error').style.display='block';
+"
+
+>
+
+<div
+id="image-error"
+style="
+display:none;
+text-align:center;
+padding:30px;
+color:#999;
+"
+>
+صورة المنتج غير متوفرة
+</div>
+
+</div>
+
+
+<div class="product-info">
+
+
+<h1>
+
+${product.nameAr}
+
+</h1>
+
+
+<h3>
+
+${product.nameEn}
+
+</h3>
+
+
+<div class="product-category">
+
+${product.category}
+
+</div>
+
+
+<p class="product-description">
+
+${product.description}
+
+</p>
+
+
+<div class="product-price">
+
+${product.price}
+دينار
+
+</div>
+
+
+<div class="detail-buttons">
+
+
+<a
+class="buy-button"
+href="https://wa.me/9647706136665?text=${encodeURIComponent(
+"السلام عليكم، أريد طلب " +
+product.nameAr +
+" بسعر " +
+product.price +
+" دينار"
+)}"
+target="_blank"
+rel="noopener"
+>
+
+🟢 اطلب المنتج عبر واتساب
+
 </a>
 
 
-<a href="add-product.html">
-⚙️ إدارة المنتجات
+<a
+class="back-button"
+href="products.html"
+>
+
+↩ العودة للمنتجات
+
 </a>
 
-</nav>
+
+</div>
 
 
+</div>
 
-<h2 class="title">
-تفاصيل المنتج
-</h2>
+</div>
 
+`;
 
+}
 
-<section class="products" id="product-details">
-
-</section>
-
-
-
-<footer>
-
-ROOH CARE © 2026
-
-</footer>
-
-
-
-<script src="products.js"></script>
-
-<script src="product-details.js"></script>
-
-
-</body>
-
-</html>
+</script></body></html>
