@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ROOH CARE | إضافة منتج</title><link rel="stylesheet" href="style.css"><style>
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ROOH CARE | إدارة المنتجات</title>
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-
-.admin-box{
+.admin-container{
 max-width:700px;
 margin:30px auto;
-background:white;
+padding:15px;
+}
+
+.admin-box{
+background:#fff;
 padding:30px;
 border-radius:30px;
 box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.admin-box h2{
+text-align:center;
+color:#a47c45;
+margin-bottom:25px;
 }
 
 .form-group{
@@ -36,7 +35,7 @@ margin-bottom:7px;
 .form-group select{
 
 width:100%;
-padding:13px;
+padding:14px;
 
 border:1px solid #ddd;
 
@@ -46,6 +45,15 @@ font-family:Tahoma,Arial,sans-serif;
 
 font-size:15px;
 
+outline:none;
+
+background:#fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+border-color:#b08a55;
 }
 
 .form-group textarea{
@@ -53,231 +61,222 @@ min-height:120px;
 resize:vertical;
 }
 
-.status{
-margin-top:20px;
-padding:15px;
-border-radius:15px;
-display:none;
+.add-button{
+
+width:100%;
+
+border:none;
+
+background:linear-gradient(135deg,#b08a55,#8d6637);
+
+color:#fff;
+
+padding:16px;
+
+border-radius:40px;
+
+font-size:17px;
+
 font-weight:bold;
+
+font-family:Tahoma,Arial,sans-serif;
+
+cursor:pointer;
+
+margin-top:10px;
 }
 
-.success{
+.add-button:disabled{
+opacity:.6;
+}
+
+.status{
+
+display:none;
+
+margin-top:20px;
+
+padding:16px;
+
+border-radius:15px;
+
+text-align:center;
+
+font-weight:bold;
+
+white-space:pre-line;
+
+}
+
+.status.success{
+display:block;
 background:#e8f8ee;
 color:#16803c;
 }
 
-.error{
+.status.error{
+display:block;
 background:#fdeaea;
 color:#b42318;
 }
 
-.loading{
+.status.loading{
+display:block;
 background:#fff5dc;
 color:#8a641f;
 }
 
-</style>
+.note{
 
-</head>
+background:#faf7f1;
 
+padding:15px;
 
-<body>
+border-radius:15px;
 
+margin-bottom:20px;
 
-<nav class="navbar">
+font-size:14px;
 
-<a href="index.html">🏠 الرئيسية</a>
+color:#666;
 
-<a href="products.html">🧴 المنتجات</a>
+line-height:1.8;
+}
 
-<a href="add-product.html">⚙️ إدارة المنتجات</a>
+@media(max-width:600px){
 
-<a href="https://wa.me/9647706136665" target="_blank">
+.admin-container{
+margin:15px auto;
+padding:10px;
+}
+
+.admin-box{
+padding:20px;
+}
+
+}
+
+</style></head><body><nav class="navbar"><a href="index.html">
+🏠 الرئيسية
+</a><a href="products.html">
+🧴 المنتجات
+</a><a href="add-product.html">
+⚙️ إدارة المنتجات
+</a><a href="https://wa.me/9647706136665" target="_blank">
 💬 واتساب
-</a>
+</a></nav><header><div class="logo"><img
+src="images/logo.png"
+alt="ROOH CARE"
 
-</nav>
+«»
 
+</div><h1>
+ROOH CARE
+</h1><p>
+إدارة المنتجات
+</p></header><main class="admin-container"><div class="admin-box"><h2>
+➕ إضافة منتج جديد
+</h2><div class="note">أدخل معلومات المنتج هنا، وبعد الضغط على زر الإضافة سيتم إرسال المنتج إلى متجر ROOH CARE تلقائيًا.
 
-
-<header>
-
-<div class="logo">
-
-<img src="images/logo.png" alt="ROOH CARE">
-
-</div>
-
-<h1>إدارة المنتجات</h1>
-
-<p>إضافة المنتجات مباشرة إلى المتجر</p>
-
-</header>
-
-
-
-<section class="admin-box">
-
-<h2 class="title">
-إضافة منتج جديد
-</h2>
-
-
-
-<div class="form-group">
-
-<label>
+</div><div class="form-group"><label>
 اسم المنتج بالعربي
-</label>
-
-<input
+</label><input
 id="nameAr"
 type="text"
-placeholder="مثال: كريم ترطيب البشرة"
->
+placeholder="مثال: سيروم فيتامين سي"
 
-</div>
+«»
 
-
-
-<div class="form-group">
-
-<label>
+</div><div class="form-group"><label>
 اسم المنتج بالإنجليزي
-</label>
-
-<input
+</label><input
 id="nameEn"
 type="text"
-placeholder="مثال: USHAS MOISTURIZER"
->
+placeholder="مثال: USHAS VIT C"
 
-</div>
+«»
 
-
-
-<div class="form-group">
-
-<label>
-السعر
-</label>
-
-<input
+</div><div class="form-group"><label>
+السعر بالدينار العراقي
+</label><input
 id="price"
 type="number"
+inputmode="numeric"
 placeholder="10000"
->
 
-</div>
+«»
 
-
-
-<div class="form-group">
-
-<label>
+</div><div class="form-group"><label>
 التصنيف
-</label>
-
-<select id="category">
-
-<option value="">اختر التصنيف</option>
-
-<option value="السيرومات">السيرومات</option>
-
-<option value="تنظيف البشرة">تنظيف البشرة</option>
-
-<option value="الكريمات">الكريمات</option>
-
-<option value="المرطبات">المرطبات</option>
-
-<option value="واقي الشمس">واقي الشمس</option>
-
-<option value="العناية بالشعر">العناية بالشعر</option>
-
-<option value="العناية بالجسم">العناية بالجسم</option>
-
-<option value="أخرى">أخرى</option>
-
-</select>
-
-</div>
-
-
-
-<div class="form-group">
-
-<label>
+</label><select id="category"><option value="">
+اختر التصنيف
+</option><option value="السيرومات">
+السيرومات
+</option><option value="تنظيف البشرة">
+تنظيف البشرة
+</option><option value="الكريمات">
+الكريمات
+</option><option value="المرطبات">
+المرطبات
+</option><option value="واقي الشمس">
+واقي الشمس
+</option><option value="العناية بالشعر">
+العناية بالشعر
+</option><option value="العناية بالجسم">
+العناية بالجسم
+</option><option value="أخرى">
+أخرى
+</option></select></div><div class="form-group"><label>
 اسم صورة المنتج
-</label>
-
-<input
+</label><input
 id="image"
 type="text"
-placeholder="مثال: new-product.jpg"
->
+placeholder="images/اسم-الصورة.jpg"
 
-</div>
+«»
 
-
-
-<div class="form-group">
-
-<label>
+</div><div class="form-group"><label>
 وصف المنتج
-</label>
-
-<textarea
+</label><textarea
 id="description"
-placeholder="اكتب وصف المنتج..."
-></textarea>
-
-</div>
-
-
-
-<button
-class="main-btn"
+placeholder="اكتب وصف المنتج هنا..."
+></textarea></div><button
+id="addButton"
+class="add-button"
 type="button"
 onclick="addProduct()"
->
+
+«»
 
 ➕ إضافة المنتج إلى المتجر
 
-</button>
-
-
-
-<div
+</button><div
 id="status"
 class="status"
-></div>
+></div></div></main><footer>ROOH CARE © 2026
 
-</section>
+<br>Premium Korean Beauty Store
 
-
-
-<footer>
-
-ROOH CARE © 2026
-
-<br>
-
-Premium Korean Beauty Store
-
-</footer>
+</footer><script>
 
 
+/*
+================================================
+رابط ROOH CARE Worker
+تم وضع الرابط الحقيقي هنا
+لا تحتاج إلى تغييره
+================================================
+*/
 
-<script>
-
-
-// ضع هنا رابط Worker الخاص بك
 const WORKER_URL =
-"https://rooh-care-admin.ahmed-j51.workers.dev/";
-
+"https://rooh-care-admin.ahmed-j51.workers.dev";
 
 
 async function addProduct(){
+
+
+const button =
+document.getElementById("addButton");
 
 const status =
 document.getElementById("status");
@@ -285,39 +284,52 @@ document.getElementById("status");
 
 const nameAr =
 document.getElementById("nameAr")
-.value.trim();
+.value
+.trim();
 
 
 const nameEn =
 document.getElementById("nameEn")
-.value.trim();
+.value
+.trim();
 
 
 const price =
 document.getElementById("price")
-.value.trim();
+.value
+.trim();
 
 
 const category =
 document.getElementById("category")
-.value.trim();
+.value
+.trim();
 
 
 const image =
 document.getElementById("image")
-.value.trim();
+.value
+.trim();
 
 
 const description =
 document.getElementById("description")
-.value.trim();
+.value
+.trim();
 
+
+
+/*
+========================
+التحقق من البيانات
+========================
+*/
 
 
 if(!nameAr){
 
 showStatus(
-"يرجى كتابة اسم المنتج بالعربي",
+"❌ اكتب اسم المنتج بالعربي",
 "error"
 );
 
@@ -329,7 +341,7 @@ return;
 if(!nameEn){
 
 showStatus(
-"يرجى كتابة اسم المنتج بالإنجليزي",
+"❌ اكتب اسم المنتج بالإنجليزي",
 "error"
 );
 
@@ -341,7 +353,7 @@ return;
 if(!price){
 
 showStatus(
-"يرجى كتابة السعر",
+"❌ اكتب سعر المنتج",
 "error"
 );
 
@@ -353,7 +365,7 @@ return;
 if(!category){
 
 showStatus(
-"يرجى اختيار التصنيف",
+"❌ اختر تصنيف المنتج",
 "error"
 );
 
@@ -365,7 +377,7 @@ return;
 if(!image){
 
 showStatus(
-"يرجى كتابة اسم الصورة",
+"❌ اكتب اسم صورة المنتج",
 "error"
 );
 
@@ -377,7 +389,7 @@ return;
 if(!description){
 
 showStatus(
-"يرجى كتابة وصف المنتج",
+"❌ اكتب وصف المنتج",
 "error"
 );
 
@@ -386,12 +398,23 @@ return;
 }
 
 
+/*
+========================
+بدء الإضافة
+========================
+*/
+
+
+button.disabled = true;
+
+button.textContent =
+"⏳ جاري إضافة المنتج...";
+
 
 showStatus(
-"⏳ جاري إضافة المنتج إلى المتجر...",
+"⏳ جاري الاتصال بالمتجر...",
 "loading"
 );
-
 
 
 try{
@@ -405,8 +428,7 @@ WORKER_URL + "/add-product",
 method:"POST",
 
 headers:{
-"Content-Type":
-"application/json"
+"Content-Type":"application/json"
 },
 
 body:JSON.stringify({
@@ -429,13 +451,44 @@ description:description
 );
 
 
+/*
+========================
+قراءة الاستجابة
+========================
+*/
 
-const data =
-await response.json();
+
+const responseText =
+await response.text();
 
 
+let data;
 
-if(!response.ok || !data.success){
+
+try{
+
+data =
+JSON.parse(responseText);
+
+}
+
+catch{
+
+throw new Error(
+"لم تصل استجابة صحيحة من السيرفر"
+);
+
+}
+
+
+/*
+========================
+فحص النتيجة
+========================
+*/
+
+
+if(!response.ok){
 
 throw new Error(
 data.message ||
@@ -445,51 +498,108 @@ data.message ||
 }
 
 
+if(!data.success){
+
+throw new Error(
+data.message ||
+"لم تتم إضافة المنتج"
+);
+
+}
+
+
+/*
+========================
+نجاح
+========================
+*/
+
 
 showStatus(
-"✅ تمت إضافة المنتج بنجاح! سيظهر في المتجر بعد تحديث GitHub Pages.",
-"success"
+
+"✅ تمت إضافة المنتج بنجاح!\n\n" +
+
+"تم إرسال المنتج إلى GitHub.\n\n" +
+
+"انتظر قليلًا ثم افتح المتجر."
+
+,"success"
+
 );
 
 
+/*
+========================
+مسح الحقول
+========================
+*/
 
-document.getElementById("nameAr").value="";
 
-document.getElementById("nameEn").value="";
+document.getElementById("nameAr")
+.value="";
 
-document.getElementById("price").value="";
+document.getElementById("nameEn")
+.value="";
 
-document.getElementById("category").value="";
+document.getElementById("price")
+.value="";
 
-document.getElementById("image").value="";
+document.getElementById("category")
+.value="";
 
-document.getElementById("description").value="";
+document.getElementById("image")
+.value="";
 
+document.getElementById("description")
+.value="";
 
 
 }
 
 catch(error){
 
+
 console.error(error);
 
+
 showStatus(
-"❌ " + error.message,
+
+"❌ لم تتم إضافة المنتج\n\n" +
+
+error.message,
+
 "error"
+
 );
 
 }
 
+
+finally{
+
+
+button.disabled = false;
+
+button.textContent =
+"➕ إضافة المنتج إلى المتجر";
+
+
 }
 
+}
+
+
+/*
+========================
+عرض الرسائل
+========================
+*/
 
 
 function showStatus(message,type){
 
 const status =
 document.getElementById("status");
-
-status.style.display="block";
 
 status.className =
 "status " + type;
@@ -499,9 +609,4 @@ message;
 
 }
 
-</script>
-
-
-</body>
-
-</html>
+</script></body></html>
