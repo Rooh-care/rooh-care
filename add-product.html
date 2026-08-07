@@ -2,9 +2,7 @@
 <html lang="ar" dir="rtl">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ROOH CARE | إدارة المنتجات</title>
@@ -13,7 +11,7 @@
 
 <style>
 
-.product-form{
+.admin-box{
 max-width:700px;
 margin:30px auto;
 background:white;
@@ -24,7 +22,6 @@ box-shadow:0 8px 25px rgba(0,0,0,.08);
 
 .form-group{
 margin-bottom:18px;
-text-align:right;
 }
 
 .form-group label{
@@ -39,20 +36,15 @@ margin-bottom:7px;
 .form-group select{
 
 width:100%;
-padding:13px 15px;
+padding:13px;
+
 border:1px solid #ddd;
+
 border-radius:15px;
+
 font-family:Tahoma,Arial,sans-serif;
+
 font-size:15px;
-outline:none;
-
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus{
-
-border-color:#b08a55;
 
 }
 
@@ -61,69 +53,27 @@ min-height:120px;
 resize:vertical;
 }
 
-.preview{
-display:none;
-margin:20px auto;
-text-align:center;
-}
-
-.preview img{
-
-width:220px;
-height:220px;
-object-fit:contain;
-border-radius:20px;
-background:#faf7f1;
-padding:10px;
-
-}
-
-.result-box{
-
-max-width:900px;
-margin:30px auto;
-background:white;
-padding:25px;
-border-radius:30px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-}
-
-#result{
-
-width:100%;
-min-height:280px;
-direction:ltr;
-text-align:left;
-font-family:monospace;
-font-size:14px;
-padding:15px;
-border:1px solid #ddd;
-border-radius:15px;
-resize:vertical;
-
-}
-
-.help{
-
-background:#faf7f1;
-padding:18px;
-border-radius:20px;
+.status{
 margin-top:20px;
-color:#555;
-
+padding:15px;
+border-radius:15px;
+display:none;
+font-weight:bold;
 }
 
 .success{
-
-display:none;
 background:#e8f8ee;
 color:#16803c;
-padding:15px;
-border-radius:15px;
-margin-top:15px;
-font-weight:bold;
+}
 
+.error{
+background:#fdeaea;
+color:#b42318;
+}
+
+.loading{
+background:#fff5dc;
+color:#8a641f;
 }
 
 </style>
@@ -136,17 +86,11 @@ font-weight:bold;
 
 <nav class="navbar">
 
-<a href="index.html">
-🏠 الرئيسية
-</a>
+<a href="index.html">🏠 الرئيسية</a>
 
-<a href="products.html">
-🧴 المنتجات
-</a>
+<a href="products.html">🧴 المنتجات</a>
 
-<a href="add-product.html">
-⚙️ إدارة المنتجات
-</a>
+<a href="add-product.html">⚙️ إدارة المنتجات</a>
 
 <a href="https://wa.me/9647706136665" target="_blank">
 💬 واتساب
@@ -164,19 +108,15 @@ font-weight:bold;
 
 </div>
 
-<h1>
-إدارة المنتجات
-</h1>
+<h1>إدارة المنتجات</h1>
 
-<p>
-إضافة منتج جديد بسهولة
-</p>
+<p>إضافة المنتجات مباشرة إلى المتجر</p>
 
 </header>
 
 
 
-<section class="product-form">
+<section class="admin-box">
 
 <h2 class="title">
 إضافة منتج جديد
@@ -191,9 +131,9 @@ font-weight:bold;
 </label>
 
 <input
-type="text"
 id="nameAr"
-placeholder="مثال: سيروم فيتامين سي"
+type="text"
+placeholder="مثال: كريم ترطيب البشرة"
 >
 
 </div>
@@ -207,9 +147,9 @@ placeholder="مثال: سيروم فيتامين سي"
 </label>
 
 <input
-type="text"
 id="nameEn"
-placeholder="مثال: USHAS VIT C"
+type="text"
+placeholder="مثال: USHAS MOISTURIZER"
 >
 
 </div>
@@ -219,13 +159,13 @@ placeholder="مثال: USHAS VIT C"
 <div class="form-group">
 
 <label>
-السعر بالدينار العراقي
+السعر
 </label>
 
 <input
-type="number"
 id="price"
-placeholder="مثال: 10000"
+type="number"
+placeholder="10000"
 >
 
 </div>
@@ -240,41 +180,23 @@ placeholder="مثال: 10000"
 
 <select id="category">
 
-<option value="">
-اختر التصنيف
-</option>
+<option value="">اختر التصنيف</option>
 
-<option value="السيرومات">
-السيرومات
-</option>
+<option value="السيرومات">السيرومات</option>
 
-<option value="تنظيف البشرة">
-تنظيف البشرة
-</option>
+<option value="تنظيف البشرة">تنظيف البشرة</option>
 
-<option value="الكريمات">
-الكريمات
-</option>
+<option value="الكريمات">الكريمات</option>
 
-<option value="المرطبات">
-المرطبات
-</option>
+<option value="المرطبات">المرطبات</option>
 
-<option value="واقي الشمس">
-واقي الشمس
-</option>
+<option value="واقي الشمس">واقي الشمس</option>
 
-<option value="العناية بالشعر">
-العناية بالشعر
-</option>
+<option value="العناية بالشعر">العناية بالشعر</option>
 
-<option value="العناية بالجسم">
-العناية بالجسم
-</option>
+<option value="العناية بالجسم">العناية بالجسم</option>
 
-<option value="أخرى">
-أخرى
-</option>
+<option value="أخرى">أخرى</option>
 
 </select>
 
@@ -285,30 +207,14 @@ placeholder="مثال: 10000"
 <div class="form-group">
 
 <label>
-اسم ملف الصورة
+اسم صورة المنتج
 </label>
 
 <input
-type="text"
 id="image"
-placeholder="مثال: vitc-serum.jpg"
+type="text"
+placeholder="مثال: new-product.jpg"
 >
-
-</div>
-
-
-
-<div class="help">
-
-بعد رفع الصورة إلى مجلد
-<strong>images</strong>
-في GitHub، اكتب اسم الملف هنا فقط.
-
-<br>
-
-مثال:
-
-<strong>vitc-serum.jpg</strong>
 
 </div>
 
@@ -322,7 +228,7 @@ placeholder="مثال: vitc-serum.jpg"
 
 <textarea
 id="description"
-placeholder="اكتب وصف المنتج هنا..."
+placeholder="اكتب وصف المنتج..."
 ></textarea>
 
 </div>
@@ -332,104 +238,19 @@ placeholder="اكتب وصف المنتج هنا..."
 <button
 class="main-btn"
 type="button"
-onclick="previewProduct()"
+onclick="addProduct()"
 >
 
-👁️ معاينة المنتج
+➕ إضافة المنتج إلى المتجر
 
 </button>
-
-
-
-<button
-class="main-btn"
-type="button"
-onclick="createProduct()"
->
-
-✨ إنشاء كود المنتج
-
-</button>
-
-
-
-<div class="preview" id="preview">
-
-<h3>
-معاينة الصورة
-</h3>
-
-<img id="previewImage" alt="معاينة المنتج">
-
-</div>
 
 
 
 <div
-class="success"
-id="successMessage"
->
-
-✅ تم إنشاء كود المنتج بنجاح
-
-</div>
-
-</section>
-
-
-
-<section class="result-box">
-
-<h2 class="title">
-كود المنتج
-</h2>
-
-<textarea
-id="result"
-readonly
-placeholder="سيظهر كود المنتج هنا..."
-></textarea>
-
-
-<br><br>
-
-
-<button
-class="main-btn"
-type="button"
-onclick="copyCode()"
->
-
-📋 نسخ الكود
-
-</button>
-
-
-<div class="help">
-
-بعد نسخ الكود:
-
-<br><br>
-
-1️⃣ افتح ملف
-<strong>products.js</strong>
-
-<br>
-
-2️⃣ ضع الكود قبل:
-
-<code>];</code>
-
-<br>
-
-3️⃣ احفظ الملف واعمل
-<strong>Commit changes</strong>
-
-<br>
-
-4️⃣ افتح صفحة المنتجات وستظهر الإضافة.
-
-</div>
+id="status"
+class="status"
+></div>
 
 </section>
 
@@ -449,129 +270,116 @@ Premium Korean Beauty Store
 
 <script>
 
-function getValue(id){
 
-return document.getElementById(id).value.trim();
-
-}
-
-
-
-function previewProduct(){
-
-const image = getValue("image");
-
-const preview = document.getElementById("preview");
-
-const previewImage = document.getElementById("previewImage");
+// ضع هنا رابط Worker الخاص بك
+const WORKER_URL =
+"https://ضع-رابط-worker-الخاص-بك.workers.dev";
 
 
 
-if(!image){
+async function addProduct(){
 
-alert("اكتب اسم ملف الصورة أولاً");
-
-return;
-
-}
+const status =
+document.getElementById("status");
 
 
-
-previewImage.src = "images/" + image;
-
-preview.style.display = "block";
-
+const nameAr =
+document.getElementById("nameAr")
+.value.trim();
 
 
-previewImage.onerror = function(){
-
-alert(
-"لم يتم العثور على الصورة. تأكد من اسم الملف ومجلد images."
-);
-
-};
+const nameEn =
+document.getElementById("nameEn")
+.value.trim();
 
 
-
-previewImage.onload = function(){
-
-preview.style.display = "block";
-
-};
-
-}
+const price =
+document.getElementById("price")
+.value.trim();
 
 
+const category =
+document.getElementById("category")
+.value.trim();
 
-function createProduct(){
 
-const nameAr = getValue("nameAr");
+const image =
+document.getElementById("image")
+.value.trim();
 
-const nameEn = getValue("nameEn");
 
-const price = getValue("price");
-
-const category = getValue("category");
-
-const image = getValue("image");
-
-const description = getValue("description");
+const description =
+document.getElementById("description")
+.value.trim();
 
 
 
 if(!nameAr){
 
-alert("يرجى كتابة اسم المنتج بالعربي");
+showStatus(
+"يرجى كتابة اسم المنتج بالعربي",
+"error"
+);
 
 return;
 
 }
-
 
 
 if(!nameEn){
 
-alert("يرجى كتابة اسم المنتج بالإنجليزي");
+showStatus(
+"يرجى كتابة اسم المنتج بالإنجليزي",
+"error"
+);
 
 return;
 
 }
-
 
 
 if(!price){
 
-alert("يرجى كتابة السعر");
+showStatus(
+"يرجى كتابة السعر",
+"error"
+);
 
 return;
 
 }
-
 
 
 if(!category){
 
-alert("يرجى اختيار التصنيف");
+showStatus(
+"يرجى اختيار التصنيف",
+"error"
+);
 
 return;
 
 }
-
 
 
 if(!image){
 
-alert("يرجى كتابة اسم الصورة");
+showStatus(
+"يرجى كتابة اسم الصورة",
+"error"
+);
 
 return;
 
 }
-
 
 
 if(!description){
 
-alert("يرجى كتابة وصف المنتج");
+showStatus(
+"يرجى كتابة وصف المنتج",
+"error"
+);
 
 return;
 
@@ -579,72 +387,115 @@ return;
 
 
 
-const code = `{
-nameAr:"${escapeText(nameAr)}",
-nameEn:"${escapeText(nameEn)}",
-price:"${escapeText(price)}",
-image:"images/${escapeText(image)}",
-category:"${escapeText(category)}",
-description:"${escapeText(description)}"
-},`;
+showStatus(
+"⏳ جاري إضافة المنتج إلى المتجر...",
+"loading"
+);
 
 
 
-document.getElementById("result").value = code;
-
-document.getElementById("successMessage").style.display = "block";
-
-}
+try{
 
 
+const response =
+await fetch(
+WORKER_URL + "/add-product",
+{
 
-function escapeText(text){
+method:"POST",
 
-return text
+headers:{
+"Content-Type":
+"application/json"
+},
 
-.replace(/\\/g,"\\\\")
+body:JSON.stringify({
 
-.replace(/"/g,'\\"')
+nameAr:nameAr,
 
-.replace(/\r?\n/g,"، ");
+nameEn:nameEn,
 
-}
+price:price,
 
+image:image,
 
+category:category,
 
-function copyCode(){
-
-const result = document.getElementById("result");
-
-
-
-if(!result.value){
-
-alert("أنشئ كود المنتج أولاً");
-
-return;
-
-}
-
-
-
-navigator.clipboard.writeText(result.value)
-
-.then(function(){
-
-alert("✅ تم نسخ كود المنتج");
+description:description
 
 })
 
-.catch(function(){
+}
+);
 
-result.select();
 
-document.execCommand("copy");
 
-alert("✅ تم نسخ كود المنتج");
+const data =
+await response.json();
 
-});
+
+
+if(!response.ok || !data.success){
+
+throw new Error(
+data.message ||
+"حدث خطأ أثناء إضافة المنتج"
+);
+
+}
+
+
+
+showStatus(
+"✅ تمت إضافة المنتج بنجاح! سيظهر في المتجر بعد تحديث GitHub Pages.",
+"success"
+);
+
+
+
+document.getElementById("nameAr").value="";
+
+document.getElementById("nameEn").value="";
+
+document.getElementById("price").value="";
+
+document.getElementById("category").value="";
+
+document.getElementById("image").value="";
+
+document.getElementById("description").value="";
+
+
+
+}
+
+catch(error){
+
+console.error(error);
+
+showStatus(
+"❌ " + error.message,
+"error"
+);
+
+}
+
+}
+
+
+
+function showStatus(message,type){
+
+const status =
+document.getElementById("status");
+
+status.style.display="block";
+
+status.className =
+"status " + type;
+
+status.textContent =
+message;
 
 }
 
