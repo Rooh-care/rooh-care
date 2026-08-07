@@ -1,10 +1,14 @@
 const params = new URLSearchParams(window.location.search);
 
+
 const productName = params.get("product");
 
 
+
 const product = products.find(item => 
+
 item.nameEn === productName
+
 );
 
 
@@ -22,7 +26,7 @@ container.innerHTML = `
 <div class="card">
 
 
-<img src="${product.image}" alt="${product.nameAr}">
+<img src="${product.image}">
 
 
 <h2>
@@ -34,6 +38,7 @@ ${product.nameAr}
 ${product.nameEn}
 
 </h2>
+
 
 
 <p>
@@ -52,6 +57,7 @@ ${product.price} دينار
 
 
 
+
 <a class="order"
 
 href="https://wa.me/9647706136665?text=اريد طلب ${product.nameAr}"
@@ -63,11 +69,11 @@ target="_blank">
 </a>
 
 
+
 </div>
 
 
 `;
-
 
 
 }
@@ -75,8 +81,26 @@ target="_blank">
 else{
 
 
-container.innerHTML =
+container.innerHTML=
 
-"<h2>المنتج غير موجود</h2>";
+`
+
+<div class="info">
+
+<h2>
+
+المنتج غير موجود
+
+</h2>
+
+<p>
+
+تأكد من الرابط
+
+</p>
+
+</div>
+
+`;
 
 }
