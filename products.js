@@ -1,14 +1,22 @@
+document.addEventListener("DOMContentLoaded", function(){
+
 const container = document.getElementById("products-container");
 
-if (container && typeof products !== "undefined") {
 
-products.forEach(product => {
+if(!container){
+return;
+}
+
+
+products.forEach(function(product){
+
 
 container.innerHTML += `
 
 <div class="card">
 
-<img src="${product.image}" alt="${product.nameEn}">
+
+<img src="${product.image}" alt="${product.nameAr}">
 
 
 <h2>
@@ -16,16 +24,6 @@ ${product.nameAr}
 <br>
 ${product.nameEn}
 </h2>
-
-
-<div class="rating">
-⭐⭐⭐⭐⭐
-</div>
-
-
-<p class="available">
-متوفر الآن ✅
-</p>
 
 
 <p>
@@ -39,7 +37,7 @@ ${product.price} دينار
 
 
 <a class="order"
-href="https://wa.me/9647706136665?text=السلام عليكم ROOH CARE%0Aأرغب بطلب ${product.nameAr}"
+href="https://wa.me/9647706136665?text=أريد طلب ${product.nameAr}"
 target="_blank">
 
 🟢 اطلب الآن
@@ -53,4 +51,5 @@ target="_blank">
 
 });
 
-}
+
+});
