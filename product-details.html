@@ -1,251 +1,410 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ROOH CARE | تفاصيل المنتج</title><link rel="stylesheet" href="style.css"><style>
 
-<title>
-ROOH CARE | تفاصيل المنتج
-</title><link rel="stylesheet"
-href="style.css"><style>
+/* =====================================================
+   ROOH CARE - PRODUCT DETAILS
+===================================================== */
+
+.rc-detail-page{
+
+    max-width:1000px;
+
+    margin:35px auto;
+
+    padding:20px 15px 100px;
+
+}
+
+
+.rc-detail-box{
+
+    background:#ffffff;
+
+    border-radius:35px;
+
+    padding:30px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,.08);
+
+}
+
 
 /* =========================
-   PRODUCT DETAILS
+   IMAGE
 ========================= */
 
-.details-page{
+.rc-detail-image{
 
-max-width:1000px;
+    width:100%;
 
-margin:40px auto;
+    height:430px;
 
-padding:20px 15px;
+    object-fit:contain;
 
-}
-
-.product-details{
-
-background:white;
-
-border-radius:35px;
-
-padding:30px;
-
-box-shadow:
-0 8px 30px rgba(0,0,0,.08);
-
-display:grid;
-
-grid-template-columns:
-1fr 1fr;
-
-gap:40px;
-
-align-items:center;
+    display:block;
 
 }
 
-.product-image{
 
-width:100%;
+/* =========================
+   INFORMATION
+========================= */
 
-height:450px;
+.rc-detail-info{
 
-object-fit:contain;
-
-display:block;
-
-}
-
-.product-info{
-
-text-align:right;
+    text-align:right;
 
 }
 
-.product-info h1{
+.rc-detail-name{
 
-color:#a47c45;
+    color:#a47c45;
 
-font-size:30px;
+    font-size:30px;
 
-line-height:1.6;
+    line-height:1.6;
 
-margin-top:0;
-
-}
-
-.product-info h3{
-
-color:#777;
-
-font-weight:normal;
+    margin:0 0 5px;
 
 }
 
-.product-description{
+.rc-detail-name-en{
 
-font-size:17px;
+    color:#777;
 
-line-height:2;
+    font-size:17px;
 
-color:#555;
-
-}
-
-.product-category{
-
-display:inline-block;
-
-background:#faf7f1;
-
-color:#a47c45;
-
-padding:8px 18px;
-
-border-radius:30px;
-
-font-weight:bold;
-
-margin:10px 0;
+    font-weight:normal;
 
 }
 
-.product-price{
+.rc-detail-category{
 
-font-size:30px;
+    display:inline-block;
 
-font-weight:bold;
+    background:#faf7f1;
 
-color:#b07b3c;
+    color:#a47c45;
 
-margin:20px 0;
+    padding:8px 18px;
 
-}
+    border-radius:30px;
 
-.detail-buttons{
+    font-weight:bold;
 
-display:flex;
-
-gap:12px;
-
-flex-wrap:wrap;
+    margin:15px 0;
 
 }
 
-.detail-buttons a{
+.rc-detail-description{
 
-display:inline-flex;
+    color:#555;
 
-align-items:center;
+    font-size:17px;
 
-justify-content:center;
-
-padding:15px 25px;
-
-border-radius:35px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-min-height:50px;
+    line-height:2;
 
 }
 
-.buy-button{
+.rc-detail-price{
 
-background:
-linear-gradient(
-135deg,
-#25D366,
-#128C7E
-);
+    color:#b07b3c;
 
-color:white !important;
+    font-size:30px;
 
-}
+    font-weight:bold;
 
-.back-button{
-
-background:
-linear-gradient(
-135deg,
-#b08a55,
-#8d6637
-);
-
-color:white !important;
+    margin:20px 0;
 
 }
 
-.not-found{
 
-background:white;
+/* =========================
+   DETAIL BUTTONS
+========================= */
 
-padding:50px 20px;
+.rc-detail-buttons{
 
-border-radius:30px;
+    display:flex;
 
-text-align:center;
+    gap:12px;
 
-box-shadow:
-0 8px 25px rgba(0,0,0,.08);
+    flex-wrap:wrap;
+
+}
+
+
+.rc-buy-button,
+.rc-back-button{
+
+    display:inline-flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    min-height:50px !important;
+
+    padding:15px 22px !important;
+
+    border-radius:35px !important;
+
+    border:0 !important;
+
+    outline:0 !important;
+
+    font-family:Tahoma,Arial,sans-serif !important;
+
+    font-size:15px !important;
+
+    font-weight:bold !important;
+
+    line-height:1.2 !important;
+
+    text-decoration:none !important;
+
+    cursor:pointer !important;
 
 }
 
-.not-found h1{
 
-color:#a47c45;
+/* واتساب */
+
+.rc-buy-button,
+.rc-buy-button:link,
+.rc-buy-button:visited,
+.rc-buy-button:hover,
+.rc-buy-button:active{
+
+    background:linear-gradient(
+        135deg,
+        #25D366,
+        #128C7E
+    ) !important;
+
+    color:#ffffff !important;
+
+    text-decoration:none !important;
 
 }
+
+
+/* العودة */
+
+.rc-back-button,
+.rc-back-button:link,
+.rc-back-button:visited,
+.rc-back-button:hover,
+.rc-back-button:active{
+
+    background:linear-gradient(
+        135deg,
+        #b08a55,
+        #8d6637
+    ) !important;
+
+    color:#ffffff !important;
+
+    text-decoration:none !important;
+
+}
+
+
+/* =========================
+   NOT FOUND
+========================= */
+
+.rc-not-found{
+
+    background:#ffffff;
+
+    border-radius:30px;
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.rc-not-found h1{
+
+    color:#a47c45;
+
+}
+
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+#rc-whatsapp-float{
+
+    position:fixed !important;
+
+    right:18px !important;
+
+    bottom:18px !important;
+
+    width:60px !important;
+
+    height:60px !important;
+
+    min-width:60px !important;
+
+    max-width:60px !important;
+
+    min-height:60px !important;
+
+    max-height:60px !important;
+
+    padding:0 !important;
+
+    margin:0 !important;
+
+    display:flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    background:#25D366 !important;
+
+    color:#ffffff !important;
+
+    border:0 !important;
+
+    border-radius:50% !important;
+
+    font-family:Arial,sans-serif !important;
+
+    font-size:28px !important;
+
+    font-weight:normal !important;
+
+    line-height:1 !important;
+
+    text-align:center !important;
+
+    text-decoration:none !important;
+
+    box-shadow:
+    0 6px 20px rgba(0,0,0,.25) !important;
+
+    z-index:999999 !important;
+
+}
+
+
+#rc-whatsapp-float:link,
+#rc-whatsapp-float:visited,
+#rc-whatsapp-float:hover,
+#rc-whatsapp-float:active{
+
+    width:60px !important;
+
+    height:60px !important;
+
+    color:#ffffff !important;
+
+    text-decoration:none !important;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:700px){
 
-.details-page{
+    .rc-detail-page{
 
-margin:20px auto;
+        margin:20px auto;
 
-padding:15px;
+        padding:15px 12px 100px;
 
-}
+    }
 
-.product-details{
 
-grid-template-columns:1fr;
+    .rc-detail-box{
 
-padding:20px;
+        grid-template-columns:1fr;
 
-gap:20px;
+        padding:20px;
 
-}
+        gap:20px;
 
-.product-image{
+    }
 
-height:300px;
 
-}
+    .rc-detail-image{
 
-.product-info{
+        height:300px;
 
-text-align:center;
+    }
 
-}
 
-.product-info h1{
+    .rc-detail-info{
 
-font-size:24px;
+        text-align:center;
 
-}
+    }
 
-.detail-buttons{
 
-flex-direction:column;
+    .rc-detail-name{
 
-}
+        font-size:25px;
 
-.detail-buttons a{
+    }
 
-width:100%;
 
-}
+    .rc-detail-buttons{
+
+        flex-direction:column;
+
+    }
+
+
+    .rc-buy-button,
+    .rc-back-button{
+
+        width:100% !important;
+
+    }
+
+
+    #rc-whatsapp-float{
+
+        right:15px !important;
+
+        bottom:15px !important;
+
+        width:55px !important;
+
+        height:55px !important;
+
+        min-width:55px !important;
+
+        max-width:55px !important;
+
+        min-height:55px !important;
+
+        max-height:55px !important;
+
+        font-size:25px !important;
+
+    }
 
 }
 
@@ -255,16 +414,7 @@ width:100%;
 🏠 الرئيسية
 </a><a href="products.html">
 🧴 المنتجات
-</a><a href="https://wa.me/9647706136665"
-target="_blank"
-rel="noopener"
-
-«»
-
-💬 واتساب
-</a>
-
-</nav><!-- =========================
+</a></nav><!-- =========================
      HEADER
 ========================= --><header><div class="logo"><img
 src="images/logo.png"
@@ -272,40 +422,30 @@ alt="ROOH CARE"
 
 «»
 
-</div><h1>
-ROOH CARE
-</h1><p>
-منتجات العناية الكورية الأصلية
-</p></header><!-- =========================
-     PRODUCT
-========================= --><main class="details-page"><div id="product-container"></div></main><!-- =========================
-     WHATSAPP
+</div><h1>ROOH CARE</h1><p>منتجات العناية بالبشرة والشعر</p></header><!-- =========================
+     PRODUCT DETAILS
+========================= --><main class="rc-detail-page"><div id="rc-detail-container"></div></main><!-- =========================
+     FLOATING WHATSAPP
 ========================= --><a
-class="whatsapp-float"
+id="rc-whatsapp-float"
 href="https://wa.me/9647706136665"
 target="_blank"
-rel="noopener"
-aria-label="واتساب"
+rel="noopener noreferrer"
+aria-label="التواصل عبر واتساب"
 
-«»
+«💬</a>»
 
-💚
-</a>
-
-<!-- =========================
-     FOOTER
-========================= --><footer>ROOH CARE © 2026
+<footer>ROOH CARE © 2026
 
 <br>Premium Korean Beauty Store
 
-</footer><!-- =========================
-     PRODUCTS
-========================= --><script src="products.js"></script><script>
+</footer><script src="products.js"></script><script>
 
+(function(){
 
 const container =
 document.getElementById(
-"product-container"
+"rc-detail-container"
 );
 
 
@@ -317,11 +457,14 @@ window.location.search
 
 const id =
 parseInt(
-params.get("id")
+params.get("id"),
+10
 );
 
 
 if(
+
+typeof products === "undefined" ||
 
 !Array.isArray(products) ||
 
@@ -333,9 +476,9 @@ id >= products.length
 
 ){
 
-container.innerHTML = `
+container.innerHTML=`
 
-<div class="not-found">
+<div class="rc-not-found">
 
 <h1>
 المنتج غير موجود
@@ -346,17 +489,8 @@ container.innerHTML = `
 </p>
 
 <a
-class="back-button"
 href="products.html"
-style="
-display:inline-flex;
-padding:14px 25px;
-border-radius:30px;
-text-decoration:none;
-color:white;
-background:#a47c45;
-font-weight:bold;
-"
+class="rc-back-button"
 >
 ↩ العودة إلى المنتجات
 </a>
@@ -365,7 +499,9 @@ font-weight:bold;
 
 `;
 
-}else{
+return;
+
+}
 
 
 const product =
@@ -373,126 +509,181 @@ products[id];
 
 
 document.title =
-"ROOH CARE | " +
+"ROOH CARE | "+
 product.nameAr;
 
 
-container.innerHTML = `
+/* =========================
+   BOX
+========================= */
 
-<div class="product-details">
+const box =
+document.createElement("div");
 
-
-<div>
-
-<img
-
-class="product-image"
-
-src="${product.image}"
-
-alt="${product.nameAr}"
-
-onerror="
-this.style.display='none';
-document.getElementById('image-error').style.display='block';
-"
-
->
-
-<div
-id="image-error"
-style="
-display:none;
-text-align:center;
-padding:30px;
-color:#999;
-"
->
-صورة المنتج غير متوفرة
-</div>
-
-</div>
+box.className=
+"rc-detail-box";
 
 
-<div class="product-info">
+/* =========================
+   IMAGE
+========================= */
+
+const imageArea =
+document.createElement("div");
 
 
-<h1>
+const image =
+document.createElement("img");
 
-${product.nameAr}
+image.className=
+"rc-detail-image";
 
-</h1>
+image.src=
+product.image;
 
+image.alt=
+product.nameAr;
 
-<h3>
+imageArea.appendChild(image);
 
-${product.nameEn}
-
-</h3>
-
-
-<div class="product-category">
-
-${product.category}
-
-</div>
+box.appendChild(imageArea);
 
 
-<p class="product-description">
+/* =========================
+   INFO
+========================= */
 
-${product.description}
+const info =
+document.createElement("div");
 
-</p>
-
-
-<div class="product-price">
-
-${product.price}
-دينار
-
-</div>
+info.className=
+"rc-detail-info";
 
 
-<div class="detail-buttons">
+const name =
+document.createElement("h1");
+
+name.className=
+"rc-detail-name";
+
+name.textContent=
+product.nameAr;
+
+info.appendChild(name);
 
 
-<a
-class="buy-button"
-href="https://wa.me/9647706136665?text=${encodeURIComponent(
-"السلام عليكم، أريد طلب " +
-product.nameAr +
-" بسعر " +
-product.price +
+const nameEn =
+document.createElement("div");
+
+nameEn.className=
+"rc-detail-name-en";
+
+nameEn.textContent=
+product.nameEn;
+
+info.appendChild(nameEn);
+
+
+const category =
+document.createElement("div");
+
+category.className=
+"rc-detail-category";
+
+category.textContent=
+product.category;
+
+info.appendChild(category);
+
+
+const description =
+document.createElement("p");
+
+description.className=
+"rc-detail-description";
+
+description.textContent=
+product.description;
+
+info.appendChild(description);
+
+
+const price =
+document.createElement("div");
+
+price.className=
+"rc-detail-price";
+
+price.textContent=
+product.price+
+" دينار";
+
+info.appendChild(price);
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+const buttons =
+document.createElement("div");
+
+buttons.className=
+"rc-detail-buttons";
+
+
+/* واتساب */
+
+const buy =
+document.createElement("a");
+
+buy.className=
+"rc-buy-button";
+
+buy.href=
+"https://wa.me/9647706136665?text="+
+encodeURIComponent(
+"السلام عليكم، أريد طلب "+
+product.nameAr+
+" بسعر "+
+product.price+
 " دينار"
-)}"
-target="_blank"
-rel="noopener"
->
+);
 
-🟢 اطلب المنتج عبر واتساب
+buy.target="_blank";
 
-</a>
+buy.rel=
+"noopener noreferrer";
 
-
-<a
-class="back-button"
-href="products.html"
->
-
-↩ العودة للمنتجات
-
-</a>
+buy.textContent=
+"🟢 اطلب المنتج عبر واتساب";
 
 
-</div>
+/* العودة */
+
+const back =
+document.createElement("a");
+
+back.className=
+"rc-back-button";
+
+back.href=
+"products.html";
+
+back.textContent=
+"↩ العودة إلى المنتجات";
 
 
-</div>
+buttons.appendChild(buy);
 
-</div>
+buttons.appendChild(back);
 
-`;
+info.appendChild(buttons);
 
-}
+box.appendChild(info);
+
+container.appendChild(box);
+
+})();
 
 </script></body></html>
