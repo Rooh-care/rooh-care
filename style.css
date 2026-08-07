@@ -2,99 +2,258 @@
 box-sizing:border-box;
 }
 
+
 body{
+
 margin:0;
+
 font-family:Tahoma, Arial, sans-serif;
+
 background:#faf7f1;
+
 color:#333;
-line-height:1.7;
+
+line-height:1.8;
+
 overflow-x:hidden;
+
 }
 
 
-/* NAVBAR */
+
+/* =====================
+   NAVBAR
+===================== */
 
 .navbar{
-background:#fff;
+
+background:white;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
-gap:10px;
+
+gap:15px;
+
 flex-wrap:wrap;
-padding:12px;
+
+padding:15px;
+
 position:sticky;
+
 top:0;
+
 z-index:1000;
-box-shadow:0 3px 15px rgba(0,0,0,.08);
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
 }
 
 
 .navbar a{
+
 text-decoration:none;
+
 color:#a47c45;
+
 background:#faf7f1;
-padding:8px 16px;
-border-radius:25px;
+
+padding:10px 22px;
+
+border-radius:30px;
+
 font-weight:bold;
-font-size:14px;
+
+transition:.3s;
+
 }
 
 
-/* HEADER */
+.navbar a:hover{
+
+background:#a47c45;
+
+color:white;
+
+}
+
+
+
+
+/* =====================
+   HEADER
+===================== */
+
 
 header{
-background:white;
+
 text-align:center;
-padding:20px 10px;
+
+background:white;
+
+padding:25px 15px;
+
 }
 
 
 .logo img{
-width:150px;
-max-width:80%;
+
+width:190px;
+
+max-width:85%;
+
 }
 
 
+.banner{
+
+width:100%;
+
+max-width:1200px;
+
+height:300px;
+
+object-fit:cover;
+
+border-radius:35px;
+
+margin:20px auto;
+
+display:block;
+
+}
+
+
+
 header h1{
+
 color:#b08a55;
-font-size:30px;
-margin:15px 0 5px;
+
+font-size:36px;
+
+margin:20px 0 5px;
+
 }
 
 
 header p{
-margin:0;
-font-size:16px;
+
+font-size:18px;
+
 }
 
 
 
-/* TITLES */
+
+
+/* =====================
+   TITLES
+===================== */
+
 
 .title{
+
 text-align:center;
+
+font-size:28px;
+
 color:#a47c45;
-font-size:25px;
-margin:25px 0;
+
+margin:35px 0 20px;
+
 }
 
 
 
-/* PRODUCTS */
 
-.products{
 
-display:grid;
+/* =====================
+   INFO BOX
+===================== */
 
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+.info{
+
+background:white;
+
+margin:25px 15px;
+
+padding:30px;
+
+border-radius:35px;
+
+text-align:center;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+
+
+
+
+/* =====================
+   TRUST & CATEGORIES
+===================== */
+
+
+.trust,
+.categories{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
 
 gap:20px;
 
-padding:15px;
+padding:25px;
 
-max-width:1200px;
+}
 
-margin:auto;
+
+.trust div,
+.categories div{
+
+background:white;
+
+padding:25px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+color:#a47c45;
+
+font-weight:bold;
+
+}
+
+
+
+
+
+/* =====================
+   PRODUCTS
+===================== */
+
+
+.products{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:25px;
+
+padding:25px;
 
 }
 
@@ -104,13 +263,24 @@ margin:auto;
 
 background:white;
 
-border-radius:25px;
+width:310px;
 
-padding:18px;
+padding:20px;
+
+border-radius:30px;
 
 text-align:center;
 
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+box-shadow:0 8px 25px rgba(0,0,0,.1);
+
+transition:.3s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-8px);
 
 }
 
@@ -120,7 +290,7 @@ box-shadow:0 5px 20px rgba(0,0,0,.08);
 
 width:100%;
 
-height:250px;
+height:280px;
 
 object-fit:contain;
 
@@ -132,74 +302,79 @@ border-radius:20px;
 
 .card h2{
 
-font-size:19px;
+font-size:21px;
 
 color:#a47c45;
 
-margin:15px 0;
+line-height:1.7;
 
 }
-
 
 
 .card p{
 
-font-size:15px;
-
-color:#555;
+font-size:16px;
 
 }
 
 
 
-/* PRICE */
-
 .price{
 
-font-size:22px;
+font-size:24px;
 
 font-weight:bold;
 
 color:#b07b3c;
 
-margin:12px;
+margin:15px;
 
 }
 
 
 
-/* BUTTONS */
 
 
-.details,
-.order,
-.main-btn{
+/* =====================
+   BUTTONS
+===================== */
+
+
+.main-btn,
+.details{
 
 display:inline-block;
 
-padding:12px 25px;
+background:linear-gradient(135deg,#b08a55,#8d6637);
 
-border-radius:35px;
+color:white !important;
+
+padding:15px 35px;
+
+border-radius:40px;
 
 text-decoration:none;
 
 font-weight:bold;
 
-margin:6px;
+margin:10px 5px;
 
-font-size:14px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
 
 transition:.3s;
+
+border:none;
+
+cursor:pointer;
 
 }
 
 
 
-.details{
+.main-btn:hover,
+.details:hover{
 
-background:#b08a55;
-
-color:white !important;
+transform:translateY(-3px);
 
 }
 
@@ -207,44 +382,53 @@ color:white !important;
 
 .order{
 
-background:#25D366;
+display:inline-block;
+
+background:linear-gradient(135deg,#25D366,#128C7E);
 
 color:white !important;
+
+padding:15px 35px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+margin:10px 5px;
 
 }
 
 
 
-.main-btn{
+.order:hover{
 
-background:#b08a55;
-
-color:white !important;
-
-border:none;
+opacity:.9;
 
 }
 
 
 
-/* WHATSAPP */
+
+/* =====================
+   WHATSAPP
+===================== */
 
 
 .whatsapp-float{
 
 position:fixed;
 
-right:18px;
+bottom:25px;
 
-bottom:18px;
+right:25px;
 
-width:60px;
+width:65px;
 
-height:60px;
+height:65px;
 
 background:#25D366;
-
-color:white;
 
 border-radius:50%;
 
@@ -254,23 +438,34 @@ align-items:center;
 
 justify-content:center;
 
-font-size:28px;
+font-size:32px;
 
-z-index:999;
+color:white;
+
+text-decoration:none;
+
+box-shadow:0 8px 25px rgba(0,0,0,.3);
+
+z-index:9999;
 
 }
 
 
 
-/* FOOTER */
+
+
+/* =====================
+   FOOTER
+===================== */
+
 
 footer{
 
-background:white;
-
 text-align:center;
 
-padding:25px;
+background:white;
+
+padding:35px 15px;
 
 margin-top:30px;
 
@@ -280,49 +475,31 @@ color:#777;
 
 
 
-/* MOBILE */
+
+
+/* =====================
+   MOBILE
+===================== */
+
 
 @media(max-width:600px){
 
 
-.navbar{
-
-gap:8px;
-
-}
-
-
 .navbar a{
 
-padding:7px 12px;
+padding:8px 15px;
 
-font-size:12px;
-
-}
-
-
-
-.products{
-
-grid-template-columns:1fr;
-
-padding:12px;
+font-size:14px;
 
 }
 
 
 
-.card{
+.banner{
 
-width:100%;
+height:220px;
 
-}
-
-
-
-.card img{
-
-height:230px;
+border-radius:25px;
 
 }
 
@@ -330,22 +507,56 @@ height:230px;
 
 header h1{
 
-font-size:25px;
+font-size:28px;
 
 }
+
 
 
 .title{
 
-font-size:22px;
+font-size:24px;
 
 }
+
+
+
+.card{
+
+width:95%;
+
+}
+
+
+
+.card img{
+
+height:240px;
+
+}
+
 
 
 .details,
 .order{
 
 width:90%;
+
+}
+
+
+
+.whatsapp-float{
+
+width:58px;
+
+height:58px;
+
+font-size:28px;
+
+right:18px;
+
+bottom:18px;
 
 }
 
