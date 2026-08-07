@@ -57,7 +57,7 @@ resize:vertical;
 
 width:100%;
 
-border:none;
+border:0;
 
 background:linear-gradient(
 135deg,
@@ -78,6 +78,10 @@ font-size:17px;
 font-weight:bold;
 
 cursor:pointer;
+
+margin-top:5px;
+
+display:block;
 
 }
 
@@ -105,57 +109,105 @@ white-space:pre-line;
 }
 
 .message.success{
-
 display:block;
-
 background:#e8f8ee;
-
 color:#16803c;
-
 }
 
 .message.error{
-
 display:block;
-
 background:#fdeaea;
-
 color:#b42318;
-
 }
 
 .message.loading{
-
 display:block;
-
 background:#fff5dc;
-
 color:#8a641f;
+}
+
+
+/* منع أي رابط من تغطية الصفحة */
+
+.admin-page,
+.admin-box,
+.form-group,
+.add-button{
+position:relative;
+z-index:10;
+}
+
+
+/* زر واتساب مستقل */
+
+.whatsapp-admin{
+
+position:fixed;
+
+right:20px;
+bottom:20px;
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+text-decoration:none;
+
+font-size:30px;
+
+z-index:9999;
+
+box-shadow:0 5px 20px rgba(0,0,0,.2);
 
 }
 
-</style></head><body><nav class="navbar"><a href="index.html">
+@media(max-width:600px){
+
+.admin-page{
+padding:10px;
+margin:15px auto;
+}
+
+.admin-box{
+padding:20px;
+}
+
+}
+
+</style></head><body><!-- =========================
+NAVBAR
+========================= --><nav class="navbar"><a href="index.html">
 🏠 الرئيسية
 </a><a href="products.html">
 🧴 المنتجات
 </a><a href="add-product.html">
 ⚙️ إدارة المنتجات
-</a><a
-href="https://wa.me/9647706136665"
-target="_blank"
-
-«»
-
-💬 واتساب
-</a>
-
-</nav><header><div class="logo"><img
+</a></nav><!-- =========================
+HEADER
+========================= --><header><div class="logo"><img
 src="images/logo.png"
 alt="ROOH CARE"
 
 «»
 
-</div><h1>ROOH CARE</h1><p>إدارة المنتجات</p></header><main class="admin-page"><div class="admin-box"><h2 class="admin-title">
+</div><h1>
+ROOH CARE
+</h1><p>
+إدارة المنتجات
+</p></header><!-- =========================
+ADMIN
+========================= --><main class="admin-page"><div class="admin-box"><h2 class="admin-title">
 ➕ إضافة منتج جديد
 </h2><div class="form-group"><label>
 اسم المنتج بالعربي
@@ -222,6 +274,7 @@ placeholder="اكتب وصف المنتج هنا..."
 ></textarea></div><button
 id="addButton"
 class="add-button"
+type="button"
 onclick="addProduct()"
 
 «»
@@ -231,22 +284,40 @@ onclick="addProduct()"
 </button><div
 id="message"
 class="message"
-></div></div></main><footer>ROOH CARE © 2026
+></div></div></main><!-- =========================
+WHATSAPP
+========================= --><a
+class="whatsapp-admin"
+href="https://wa.me/9647706136665"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="واتساب"
+
+«»
+
+💬
+</a>
+
+<!-- =========================
+FOOTER
+========================= --><footer>ROOH CARE © 2026
 
 <br>Premium Korean Beauty Store
 
 </footer><script>
 
-/*
-========================================
-رابط ROOH CARE Worker
+/* ==================================
+رابط Worker الخاص بك
 لا تغيّره
-========================================
-*/
+================================== */
 
 const WORKER_URL =
 "https://rooh-care-admin.ahmed-j51.workers.dev";
 
+
+/* ==================================
+إضافة المنتج
+================================== */
 
 async function addProduct(){
 
@@ -293,6 +364,7 @@ return;
 
 }
 
+
 if(!product.nameEn){
 
 showMessage(
@@ -304,38 +376,42 @@ return;
 
 }
 
+
 if(!product.price){
 
 showMessage(
-"❌ اكتب سعر المنتج",
+"❌ اكتب السعر",
 "error"
 );
 
 return;
 
 }
+
 
 if(!product.category){
 
 showMessage(
-"❌ اختر تصنيف المنتج",
+"❌ اختر التصنيف",
 "error"
 );
 
 return;
 
 }
+
 
 if(!product.image){
 
 showMessage(
-"❌ اكتب مسار الصورة",
+"❌ اكتب اسم الصورة",
 "error"
 );
 
 return;
 
 }
+
 
 if(!product.description){
 
@@ -349,7 +425,7 @@ return;
 }
 
 
-/* بدء العملية */
+/* بدء الإضافة */
 
 button.disabled=true;
 
@@ -362,26 +438,7 @@ showMessage(
 );
 
 
-/*
-========================================
-إرسال المنتج
-========================================
-*/
-
 try{
-
-const controller =
-new AbortController();
-
-const timer =
-setTimeout(
-function(){
-
-controller.abort();
-
-},
-20000
-);
 
 
 const response =
@@ -399,17 +456,11 @@ headers:{
 },
 
 body:
-JSON.stringify(product),
-
-signal:
-controller.signal
+JSON.stringify(product)
 
 }
 
 );
-
-
-clearTimeout(timer);
 
 
 const text =
@@ -429,7 +480,7 @@ JSON.parse(text);
 catch{
 
 throw new Error(
-"لم تصل استجابة صحيحة من Worker"
+"Worker لم يرجع استجابة صحيحة"
 );
 
 }
@@ -438,10 +489,8 @@ throw new Error(
 if(!response.ok){
 
 throw new Error(
-
 data.message ||
-"حدث خطأ أثناء الإضافة"
-
+"حدث خطأ في Worker"
 );
 
 }
@@ -450,10 +499,8 @@ data.message ||
 if(!data.success){
 
 throw new Error(
-
 data.message ||
 "لم تتم إضافة المنتج"
-
 );
 
 }
@@ -471,7 +518,7 @@ showMessage(
 );
 
 
-/* تنظيف الحقول */
+/* مسح البيانات */
 
 document.getElementById("nameAr")
 .value="";
@@ -496,29 +543,14 @@ document.getElementById("description")
 
 catch(error){
 
-if(error.name==="AbortError"){
-
 showMessage(
 
-"❌ انتهى الاتصال بعد 20 ثانية.\n\n" +
-"لم يصل رد من Worker.",
-
-"error"
-
-);
-
-}else{
-
-showMessage(
-
-"❌ لم تتم إضافة المنتج\n\n" +
+"❌ فشل إضافة المنتج\n\n" +
 error.message,
 
 "error"
 
 );
-
-}
 
 }
 
@@ -531,11 +563,9 @@ button.textContent=
 }
 
 
-/*
-========================================
-عرض الرسائل
-========================================
-*/
+/* ==================================
+الرسائل
+================================== */
 
 function showMessage(text,type){
 
