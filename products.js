@@ -39,7 +39,16 @@ category:"السيرومات",
 description:"تعزيز نضارة وشد البشرة، ترطيب عالي"
 },
 
+{
+nameAr:"كريم ترطيب تجريبي",
+nameEn:"Test Moisturizer",
+price:"15000",
+image:"images/charcoal.jpg.png",
+category:"الكريمات",
+description:"كريم بي خير"
+},
 
+  
 {
 nameAr:"سيروم فيتامين سي",
 nameEn:"USHAS VIT C",
