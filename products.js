@@ -52,6 +52,33 @@ const products = [
         image: "images/dabo-collagen-sunscreen.png",
         category: "واقي شمس",
         description: "مخصص للبشرة الجافة والمختلطة، يمنح البشرة إشراقة ونضارة، سريع الامتصاص، ويطابق لون البشرة"
+    },
+
+    {
+        nameAr: "واقي شمس بالصبار",
+        nameEn: "DABO ALOE VERA CALMING SUN SCREEN",
+        price: "15000",
+        image: "images/dabo-aloe-vera-calming-sunscreen.png",
+        category: "واقي شمس",
+        description: "شفاف، سريع الامتصاص، حماية عالية، يصلح كقاعدة مكياج، مخصص للبشرة الحساسة والمتهيجة ويهدئ البشرة"
+    },
+
+    {
+        nameAr: "واقي شمس بالصبار للتفتيح",
+        nameEn: "DABO ALOE VERA TONE UP SUN SCREEN",
+        price: "15000",
+        image: "images/dabo-aloe-vera-tone-up-sunscreen.png",
+        category: "واقي شمس",
+        description: "شفاف، سريع الامتصاص، حماية عالية، يصلح كقاعدة مكياج، ويعطي تفتيحًا للبشرة"
+    },
+
+    {
+        nameAr: "واقي شمس للبشرة الدهنية",
+        nameEn: "DABO WHITE BLOCK SUN SCREEN",
+        price: "15000",
+        image: "images/dabo-white-block-sunscreen.png",
+        category: "واقي شمس",
+        description: "سريع الامتصاص، حماية عالية، يصلح كقاعدة مكياج، مقاوم للماء، ويساعد على تنظيم إفراز الدهون"
     }
 
 ];
