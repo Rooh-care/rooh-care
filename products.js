@@ -113,7 +113,7 @@ const products = [
         nameAr: "ضمادات قطنية مهدئة ومرطبة",
         nameEn: "DABO TONER PADS",
         price: "19000",
-        image: "images/dabo-toner-pads.jpg",
+        image: "images/dabo-toner-pads.png",
         category: "مرطب",
         description: "يرطب ويهدئ البشرة لاحتوائه على التونر، بالإضافة إلى قابليته العالية على تنظيف البشرة"
     }
