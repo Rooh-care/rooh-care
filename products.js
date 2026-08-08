@@ -58,7 +58,7 @@ const products = [
         nameAr: "واقي شمس بالصبار",
         nameEn: "DABO ALOE VERA CALMING SUN SCREEN",
         price: "15000",
-        image: "images/dabo-aloe-vera-calming-sunscreen.png",
+        image: "images/dabo-aloe-vera-calming-sunscreen.jpg",
         category: "واقي شمس",
         description: "شفاف، سريع الامتصاص، حماية عالية، يصلح كقاعدة مكياج، مخصص للبشرة الحساسة والمتهيجة ويهدئ البشرة"
     },
@@ -67,7 +67,7 @@ const products = [
         nameAr: "واقي شمس بالصبار للتفتيح",
         nameEn: "DABO ALOE VERA TONE UP SUN SCREEN",
         price: "15000",
-        image: "images/dabo-aloe-vera-tone-up-sunscreen.png",
+        image: "images/dabo-aloe-vera-tone-up-sunscreen.jpg",
         category: "واقي شمس",
         description: "شفاف، سريع الامتصاص، حماية عالية، يصلح كقاعدة مكياج، ويعطي تفتيحًا للبشرة"
     },
